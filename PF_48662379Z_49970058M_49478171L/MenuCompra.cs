@@ -16,5 +16,10 @@ namespace PF_48662379Z_49970058M_49478171L
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hola");
+        }
     }
 }

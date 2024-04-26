@@ -32,9 +32,10 @@
             // 
             // CrearUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(2918, 2002);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "CrearUsuario";
             this.Text = "MURCIA E-BIKES";
             this.ResumeLayout(false);
