@@ -178,10 +178,10 @@
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(468, 1389);
+            this.panel2.Location = new System.Drawing.Point(467, 1401);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 100);
-            this.panel2.TabIndex = 12;
+            this.panel2.TabIndex = 13;
             // 
             // InicioSesion
             // 
