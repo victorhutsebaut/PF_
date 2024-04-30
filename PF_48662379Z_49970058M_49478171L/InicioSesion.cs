@@ -16,5 +16,15 @@ namespace PF_48662379Z_49970058M_49478171L
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_cerrar_inicio_sesion_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
