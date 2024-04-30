@@ -43,35 +43,88 @@ namespace PF_48662379Z_49970058M_49478171L
 
         private void btn_entrar_inicio_sesion_Click(object sender, EventArgs e)
         {
-            string user, pass;
-            user = txb_usuario.Text;
-            pass = txb_contraseña.Text;
+            
             SqlConnection conexión = new SqlConnection("server=(local)\\SQLEXPRESS;database=master; Integrated Security = SSPI");
             SqlCommand comandosql = new SqlCommand();
-            try
-            {
-                conexión.Open();
 
-            } catch (Exception ex)
+            if (cbx_roles_inicio_sesion.Text == "")
             {
-                MessageBox.Show("No se ha podido establecer conexion con la base de datos");
-
+                MessageBox.Show("Debe introducir su rol");
             }
-            comandosql.Connection = conexión;
-            comandosql.CommandText = "SELECT usuario,contraseña FROM usuarios WHERE user=usuario AND pass=contraseña";
-            SqlDataReader midatareader = comandosql.ExecuteReader();
-
-            if (midatareader.Read())
+            else if (cbx_roles_inicio_sesion.Text == "Administrador")
             {
-                this.Hide();
-                MessageBox.Show("Bienvenido" + user);
+                try
+                {
+                    conexión.Open();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("No se ha podido establecer conexion con la base de datos");
+
+                }
+                string user, pass;
+                user = txb_usuario.Text;
+                pass = txb_contraseña.Text;
+                comandosql.Connection = conexión;
+                comandosql.CommandText = "SELECT usuario,contraseña FROM administradores WHERE usuario=@user AND contraseña=@pass";
+                comandosql.Parameters.AddWithValue("@user", user);
+                comandosql.Parameters.AddWithValue("@pass", pass);
+                SqlDataReader midatareader = comandosql.ExecuteReader();
+                
+                comandosql.Parameters.Clear();
+                if (midatareader.Read())
+                {
+                    this.Hide();
+                    MessageBox.Show("Bienvenido " + user);
+
+
+                }
+                else
+                {
+                    MessageBox.Show("No existe el administrador " + user);
+                }
 
 
             }
             else
             {
-                MessageBox.Show("No existe el usuario"+user);
+
+                try
+                {
+                    conexión.Open();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("No se ha podido establecer conexion con la base de datos");
+
+                }
+                string user, pass;
+                user = txb_usuario.Text;
+                pass = txb_contraseña.Text;
+                comandosql.Connection = conexión;
+                comandosql.CommandText = "SELECT usuario,contraseña FROM usuarios WHERE usuario=@user AND contraseña=@pass";
+                comandosql.Parameters.AddWithValue("@user", user);
+                comandosql.Parameters.AddWithValue("@pass", pass);
+                SqlDataReader midatareader = comandosql.ExecuteReader();
+                
+                comandosql.Parameters.Clear();
+
+                if (midatareader.Read())
+                {
+                    this.Hide();
+                    MessageBox.Show("Bienvenido " + user);
+
+
+                }
+                else
+                {
+                    MessageBox.Show("No existe el usuario " + user);
+                }
+
             }
+            
 
             }
 
