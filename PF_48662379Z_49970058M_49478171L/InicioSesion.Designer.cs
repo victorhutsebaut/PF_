@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InicioSesion));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_app = new System.Windows.Forms.Label();
             this.btn_cerrar_inicio_sesion = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lbl_app = new System.Windows.Forms.Label();
             this.txb_usuario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txb_contraseña = new System.Windows.Forms.TextBox();
             this.checkBox_mostrar_contraseña = new System.Windows.Forms.CheckBox();
             this.btn_entrar_inicio_sesion = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -55,6 +55,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1099, 99);
             this.panel1.TabIndex = 0;
+            // 
+            // lbl_app
+            // 
+            this.lbl_app.AutoSize = true;
+            this.lbl_app.Font = new System.Drawing.Font("Yu Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_app.Location = new System.Drawing.Point(29, 20);
+            this.lbl_app.Name = "lbl_app";
+            this.lbl_app.Size = new System.Drawing.Size(421, 62);
+            this.lbl_app.TabIndex = 1;
+            this.lbl_app.Text = "MURCIA E-BIKES";
+            this.lbl_app.Click += new System.EventHandler(this.label1_Click);
             // 
             // btn_cerrar_inicio_sesion
             // 
@@ -80,17 +91,6 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // lbl_app
-            // 
-            this.lbl_app.AutoSize = true;
-            this.lbl_app.Font = new System.Drawing.Font("Yu Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_app.Location = new System.Drawing.Point(29, 20);
-            this.lbl_app.Name = "lbl_app";
-            this.lbl_app.Size = new System.Drawing.Size(421, 62);
-            this.lbl_app.TabIndex = 1;
-            this.lbl_app.Text = "MURCIA E-BIKES";
-            this.lbl_app.Click += new System.EventHandler(this.label1_Click);
-            // 
             // txb_usuario
             // 
             this.txb_usuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -101,6 +101,8 @@
             this.txb_usuario.TabIndex = 2;
             this.txb_usuario.Text = "Ingrese su usuario";
             this.txb_usuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txb_usuario.Enter += new System.EventHandler(this.txb_usuario_Enter);
+            this.txb_usuario.Leave += new System.EventHandler(this.txb_usuario_Leave);
             // 
             // label1
             // 
@@ -120,16 +122,18 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "____________________________________________";
             // 
-            // textBox2
+            // txb_contraseña
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Yu Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(262, 782);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(551, 49);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.Text = "Ingrese su contraseña";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txb_contraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txb_contraseña.Font = new System.Drawing.Font("Yu Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_contraseña.Location = new System.Drawing.Point(262, 782);
+            this.txb_contraseña.Name = "txb_contraseña";
+            this.txb_contraseña.Size = new System.Drawing.Size(551, 49);
+            this.txb_contraseña.TabIndex = 5;
+            this.txb_contraseña.Text = "Ingrese su contraseña";
+            this.txb_contraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txb_contraseña.Enter += new System.EventHandler(this.txb_contraseña_Enter);
+            this.txb_contraseña.Leave += new System.EventHandler(this.txb_contraseña_Leave);
             // 
             // checkBox_mostrar_contraseña
             // 
@@ -153,6 +157,7 @@
             this.btn_entrar_inicio_sesion.TabIndex = 9;
             this.btn_entrar_inicio_sesion.Text = "Entrar";
             this.btn_entrar_inicio_sesion.UseVisualStyleBackColor = false;
+            this.btn_entrar_inicio_sesion.Click += new System.EventHandler(this.btn_entrar_inicio_sesion_Click);
             // 
             // label3
             // 
@@ -175,6 +180,7 @@
             this.btn_registrarse_inicio_sesion.TabIndex = 11;
             this.btn_registrarse_inicio_sesion.Text = "Registrarme";
             this.btn_registrarse_inicio_sesion.UseVisualStyleBackColor = false;
+            this.btn_registrarse_inicio_sesion.Click += new System.EventHandler(this.btn_registrarse_inicio_sesion_Click);
             // 
             // panel2
             // 
@@ -197,7 +203,7 @@
             this.Controls.Add(this.btn_entrar_inicio_sesion);
             this.Controls.Add(this.checkBox_mostrar_contraseña);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txb_contraseña);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txb_usuario);
             this.Controls.Add(this.pictureBox1);
@@ -224,7 +230,7 @@
         private System.Windows.Forms.TextBox txb_usuario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txb_contraseña;
         private System.Windows.Forms.CheckBox checkBox_mostrar_contraseña;
         private System.Windows.Forms.Button btn_entrar_inicio_sesion;
         private System.Windows.Forms.Label label3;
