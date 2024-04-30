@@ -26,5 +26,10 @@ namespace PF_48662379Z_49970058M_49478171L
         {
             Close();
         }
+
+        private void checkBox_mostrar_contraseña_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
