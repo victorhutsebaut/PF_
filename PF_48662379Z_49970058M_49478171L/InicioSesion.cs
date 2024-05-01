@@ -47,6 +47,7 @@ namespace PF_48662379Z_49970058M_49478171L
             SqlConnection conexión = new SqlConnection("server=(local)\\SQLEXPRESS;database=master; Integrated Security = SSPI");
             SqlCommand comandosql = new SqlCommand();
 
+
             if (cbx_roles_inicio_sesion.Text == "")
             {
                 MessageBox.Show("Debe introducir su rol");
@@ -115,7 +116,8 @@ namespace PF_48662379Z_49970058M_49478171L
                 {
                     this.Hide();
                     MessageBox.Show("Bienvenido " + user);
-
+                    MenuCompra menuCompra = new MenuCompra();
+                    menuCompra.Show();
 
                 }
                 else
@@ -174,6 +176,11 @@ namespace PF_48662379Z_49970058M_49478171L
             this.Hide();
             registrar.Show();
 
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }
