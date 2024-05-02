@@ -14,103 +14,110 @@ namespace PF_48662379Z_49970058M_49478171L
 {
     public partial class MenuCompra : Form
     {
+        public class ComboBoxItem
+        {
+            public string Text { get; set; }
+            public int Value { get; set; }
+
+            // Sobreescribe el método ToString para asegurar que el texto correcto se muestra en el ComboBox.
+            public override string ToString()
+            {
+                return Text;
+            }
+        }
+
         public MenuCompra()
         {
             InitializeComponent();
-            CargarModelosBicicletas();
-            CargarBaterias();
-            CargarMotores();
+
+            cbBaterias.SelectedIndexChanged += new EventHandler(ComboBoxes_SelectedIndexChanged);
+            cbMotores.SelectedIndexChanged += new EventHandler(ComboBoxes_SelectedIndexChanged);
+            cbBicicleta.SelectedIndexChanged += new EventHandler(ComboBoxes_SelectedIndexChanged);
         }
 
-        private void CargarModelosBicicletas()
+        private decimal ObtenerPrecioPorId(string tableName, int itemId)
         {
+            decimal precio = 0;
             string connectionString = "server=(local)\\SQLEXPRESS;database=master; Integrated Security = SSPI";
-            string query = "SELECT BicicletaID, NombreModelo FROM Bicicletas";
+            // Asegúrate de que la columna para el ID y el precio sean correctas.
+            string query = $"SELECT Precio FROM {tableName} WHERE ID = @ItemId";  // Ajusta 'PrecioBase' y 'ID' si son diferentes.
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@ItemId", itemId);
+
                 try
                 {
                     conn.Open();
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    SqlDataReader reader = cmd.ExecuteReader();
-
-                    cbModelos.DisplayMember = "Text";
-                    cbModelos.ValueMember = "Value";
-
-                    while (reader.Read())
+                    var result = cmd.ExecuteScalar();
+                    if (result != DBNull.Value)
                     {
-                        cbModelos.Items.Add(new { Text = reader["NombreModelo"].ToString(), Value = reader["BicicletaID"].ToString() });
+                        precio = Convert.ToDecimal(result);
                     }
+                    // Para depuración
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error al cargar los modelos de bicicletas: " + ex.Message);
+                    MessageBox.Show("Error al obtener el precio: " + ex.Message);
                 }
             }
+
+            return precio;
         }
-        private void CargarBaterias()
+
+
+        private void ComboBoxes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string connectionString = "server=(local)\\SQLEXPRESS;database=master; Integrated Security = SSPI";
-        string query = "SELECT Nombre FROM Baterias";
-
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                try
-                {
-                    conn.Open();
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    SqlDataReader reader = cmd.ExecuteReader();
-
-                    cbBaterias.DisplayMember = "Text";
-                    cbBaterias.ValueMember = "Value";
-
-                    while (reader.Read())
-                    {
-                        string nombre = reader["Nombre"].ToString();
-                        cbBaterias.Items.Add(nombre);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al cargar los modelos de bicicletas: " + ex.Message);
-                }
-            }
+            UpdatePrice();
         }
 
-        private void CargarMotores()
+        private void UpdatePrice()
         {
-            string connectionString = "server=(local)\\SQLEXPRESS;database=master; Integrated Security = SSPI";
-            string query = "SELECT Nombre FROM Motores";
+            decimal precioTotal = 0;
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            // Baterías
+            if (cbBaterias.SelectedValue != null && int.TryParse(cbBaterias.SelectedValue.ToString(), out int idBateria))
             {
-                try
-                {
-                    conn.Open();
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    SqlDataReader reader = cmd.ExecuteReader();
-
-                    cbMotores.DisplayMember = "Text";
-                    cbMotores.ValueMember = "Value";
-
-                    while (reader.Read())
-                    {
-                        string nombre = reader["Nombre"].ToString();
-                        cbMotores.Items.Add(nombre);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al cargar los modelos de bicicletas: " + ex.Message);
-                }
+                precioTotal += ObtenerPrecioPorId("Baterias", idBateria);
             }
+
+            // Motores
+            if (cbMotores.SelectedValue != null && int.TryParse(cbMotores.SelectedValue.ToString(), out int idMotor))
+            {
+                precioTotal += ObtenerPrecioPorId("Motores", idMotor);
+            }
+
+            // Bicicletas
+            if (cbBicicleta.SelectedValue != null && int.TryParse(cbBicicleta.SelectedValue.ToString(), out int idBicicleta))
+            {
+                precioTotal += ObtenerPrecioPorId("Bicicletas", idBicicleta);
+            }
+
+            lPrecio.Text = $"{precioTotal:C}";
         }
+
 
 
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Hola");
+        }
+
+        private void cbModelos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MenuCompra_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'masterDataSet3.Motores' Puede moverla o quitarla según sea necesario.
+            this.motoresTableAdapter.Fill(this.masterDataSet3.Motores);
+            // TODO: esta línea de código carga datos en la tabla 'masterDataSet2.Baterias' Puede moverla o quitarla según sea necesario.
+            this.bateriasTableAdapter.Fill(this.masterDataSet2.Baterias);
+            // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Bicicletas' Puede moverla o quitarla según sea necesario.
+            this.bicicletasTableAdapter.Fill(this.masterDataSet.Bicicletas);
+
         }
     }
 }
