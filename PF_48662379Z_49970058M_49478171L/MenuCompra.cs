@@ -119,5 +119,15 @@ namespace PF_48662379Z_49970058M_49478171L
             this.bicicletasTableAdapter.Fill(this.masterDataSet.Bicicletas);
 
         }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lPrecio_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
