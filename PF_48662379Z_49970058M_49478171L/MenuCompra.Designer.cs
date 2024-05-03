@@ -47,6 +47,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btn_carrito = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bicicletasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bateriasBindingSource)).BeginInit();
@@ -65,9 +66,10 @@
             this.cbBicicleta.DisplayMember = "NombreModelo";
             this.cbBicicleta.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbBicicleta.FormattingEnabled = true;
-            this.cbBicicleta.Location = new System.Drawing.Point(400, 89);
+            this.cbBicicleta.Location = new System.Drawing.Point(700, 161);
+            this.cbBicicleta.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.cbBicicleta.Name = "cbBicicleta";
-            this.cbBicicleta.Size = new System.Drawing.Size(188, 30);
+            this.cbBicicleta.Size = new System.Drawing.Size(326, 48);
             this.cbBicicleta.TabIndex = 1;
             this.cbBicicleta.ValueMember = "ID";
             this.cbBicicleta.SelectedIndexChanged += new System.EventHandler(this.cbModelos_SelectedIndexChanged);
@@ -88,9 +90,10 @@
             this.cbBaterias.DisplayMember = "Nombre";
             this.cbBaterias.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbBaterias.FormattingEnabled = true;
-            this.cbBaterias.Location = new System.Drawing.Point(400, 125);
+            this.cbBaterias.Location = new System.Drawing.Point(700, 227);
+            this.cbBaterias.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.cbBaterias.Name = "cbBaterias";
-            this.cbBaterias.Size = new System.Drawing.Size(188, 30);
+            this.cbBaterias.Size = new System.Drawing.Size(326, 48);
             this.cbBaterias.TabIndex = 2;
             this.cbBaterias.ValueMember = "ID";
             // 
@@ -110,9 +113,10 @@
             this.cbMotores.DisplayMember = "Nombre";
             this.cbMotores.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMotores.FormattingEnabled = true;
-            this.cbMotores.Location = new System.Drawing.Point(400, 161);
+            this.cbMotores.Location = new System.Drawing.Point(700, 292);
+            this.cbMotores.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.cbMotores.Name = "cbMotores";
-            this.cbMotores.Size = new System.Drawing.Size(188, 30);
+            this.cbMotores.Size = new System.Drawing.Size(326, 48);
             this.cbMotores.TabIndex = 3;
             this.cbMotores.ValueMember = "ID";
             // 
@@ -130,9 +134,10 @@
             // 
             this.lPrecio.AutoSize = true;
             this.lPrecio.Font = new System.Drawing.Font("Yu Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lPrecio.Location = new System.Drawing.Point(394, 215);
+            this.lPrecio.Location = new System.Drawing.Point(690, 390);
+            this.lPrecio.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lPrecio.Name = "lPrecio";
-            this.lPrecio.Size = new System.Drawing.Size(55, 36);
+            this.lPrecio.Size = new System.Drawing.Size(96, 63);
             this.lPrecio.TabIndex = 4;
             this.lPrecio.Text = "0 €";
             this.lPrecio.Click += new System.EventHandler(this.lPrecio_Click);
@@ -140,9 +145,10 @@
             // pbBicicletas
             // 
             this.pbBicicletas.Image = global::PF_48662379Z_49970058M_49478171L.Properties.Resources.BicicletaMontaña_1;
-            this.pbBicicletas.Location = new System.Drawing.Point(6, 89);
+            this.pbBicicletas.Location = new System.Drawing.Point(10, 161);
+            this.pbBicicletas.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.pbBicicletas.Name = "pbBicicletas";
-            this.pbBicicletas.Size = new System.Drawing.Size(359, 198);
+            this.pbBicicletas.Size = new System.Drawing.Size(628, 359);
             this.pbBicicletas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbBicicletas.TabIndex = 1;
             this.pbBicicletas.TabStop = false;
@@ -163,24 +169,27 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(2, 5);
+            this.tabControl1.Location = new System.Drawing.Point(4, 9);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(605, 431);
+            this.tabControl1.Size = new System.Drawing.Size(1059, 781);
             this.tabControl1.TabIndex = 5;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btn_carrito);
             this.tabPage1.Controls.Add(this.pbBicicletas);
             this.tabPage1.Controls.Add(this.lPrecio);
             this.tabPage1.Controls.Add(this.cbBaterias);
             this.tabPage1.Controls.Add(this.cbMotores);
             this.tabPage1.Controls.Add(this.cbBicicleta);
             this.tabPage1.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Location = new System.Drawing.Point(10, 47);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(597, 402);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tabPage1.Size = new System.Drawing.Size(1039, 724);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "PERSONALIZACION";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -190,10 +199,11 @@
             // 
             this.tabPage2.Controls.Add(this.comboBox1);
             this.tabPage2.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Location = new System.Drawing.Point(10, 47);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(597, 402);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tabPage2.Size = new System.Drawing.Size(1039, 724);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "MODELOS";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -201,17 +211,29 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(295, 85);
+            this.comboBox1.Location = new System.Drawing.Point(516, 154);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 34);
+            this.comboBox1.Size = new System.Drawing.Size(209, 55);
             this.comboBox1.TabIndex = 0;
+            // 
+            // btn_carrito
+            // 
+            this.btn_carrito.Location = new System.Drawing.Point(701, 621);
+            this.btn_carrito.Name = "btn_carrito";
+            this.btn_carrito.Size = new System.Drawing.Size(292, 73);
+            this.btn_carrito.TabIndex = 5;
+            this.btn_carrito.Text = "Comprar";
+            this.btn_carrito.UseVisualStyleBackColor = true;
+            this.btn_carrito.Click += new System.EventHandler(this.btn_carrito_Click);
             // 
             // MenuCompra
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(606, 474);
+            this.ClientSize = new System.Drawing.Size(1119, 859);
             this.Controls.Add(this.tabControl1);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "MenuCompra";
             this.Text = "MURCIA E-BIKES";
             this.Load += new System.EventHandler(this.MenuCompra_Load);
@@ -250,5 +272,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btn_carrito;
     }
 }

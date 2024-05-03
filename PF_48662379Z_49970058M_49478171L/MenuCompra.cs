@@ -129,5 +129,45 @@ namespace PF_48662379Z_49970058M_49478171L
         {
 
         }
+
+        private void btn_carrito_Click(object sender, EventArgs e)
+        {
+
+
+            string connectionString = "server=(local)\\SQLEXPRESS;database=master; Integrated Security = SSPI";
+            // Asegúrate de que la columna para el ID y el precio sean correctas.
+            SqlConnection conn = new SqlConnection(connectionString);
+            
+            decimal precioTotal = 0;
+
+            // Baterías
+            if (cbBaterias.SelectedValue != null && int.TryParse(cbBaterias.SelectedValue.ToString(), out int idBateria))
+            {
+                precioTotal += ObtenerPrecioPorId("Baterias", idBateria);
+            }
+
+            // Motores
+            if (cbMotores.SelectedValue != null && int.TryParse(cbMotores.SelectedValue.ToString(), out int idMotor))
+            {
+                precioTotal += ObtenerPrecioPorId("Motores", idMotor);
+            }
+
+            // Bicicletas
+            if (cbBicicleta.SelectedValue != null && int.TryParse(cbBicicleta.SelectedValue.ToString(), out int idBicicleta))
+            {
+                precioTotal += ObtenerPrecioPorId("Bicicletas", idBicicleta);
+            }
+            
+            
+
+
+
+
+
+            string query = "INSERT @preciototal INTO Carrito ";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@preciototal", precioTotal);
+
+        }
     }
 }
