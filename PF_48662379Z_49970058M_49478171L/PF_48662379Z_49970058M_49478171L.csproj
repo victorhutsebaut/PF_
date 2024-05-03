@@ -177,5 +177,22 @@
   <ItemGroup>
     <None Include="Resources\BicicletaMontaña_11.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\BicicletaCarreteraNegra.jpg" />
+    <Content Include="Resources\BicicletaMontañaAzul.png" />
+    <Content Include="Resources\BicicletaMontañaNeonAzul.png" />
+    <Content Include="Resources\BicicletaMontañaRoja.png" />
+    <Content Include="Resources\BicicletaMontañaRosa.png" />
+    <Content Include="Resources\BicicletaMontañaVerde.png" />
+    <Content Include="Resources\bicicleta_montaña_naranja.png" />
+    <Content Include="Resources\CarreteraAzul.png" />
+    <Content Include="Resources\CarreteraRoja.jpg" />
+    <Content Include="Resources\CarreteraRosa.png" />
+    <Content Include="Resources\CarreteraVerde.png" />
+    <Content Include="Resources\PaseoAzul.png" />
+    <Content Include="Resources\PaseoRoja.jpg" />
+    <Content Include="Resources\PaseoRosa.png" />
+    <Content Include="Resources\PaseoVerde.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
