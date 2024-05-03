@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Collections;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace PF_48662379Z_49970058M_49478171L
 {
@@ -71,10 +72,10 @@ namespace PF_48662379Z_49970058M_49478171L
         {
             UpdatePrice();
         }
-
+        public decimal precioTotal = 0;
         private void UpdatePrice()
         {
-            decimal precioTotal = 0;
+            
 
             // Baterías
             if (cbBaterias.SelectedValue != null && int.TryParse(cbBaterias.SelectedValue.ToString(), out int idBateria))
@@ -133,40 +134,60 @@ namespace PF_48662379Z_49970058M_49478171L
         private void btn_carrito_Click(object sender, EventArgs e)
         {
 
-
             string connectionString = "server=(local)\\SQLEXPRESS;database=master; Integrated Security = SSPI";
-            // Asegúrate de que la columna para el ID y el precio sean correctas.
             SqlConnection conn = new SqlConnection(connectionString);
-            
-            decimal precioTotal = 0;
 
-            // Baterías
-            if (cbBaterias.SelectedValue != null && int.TryParse(cbBaterias.SelectedValue.ToString(), out int idBateria))
+            string Bici = cbBicicleta.Text;
+            string Bateria = cbBaterias.Text;
+            string Motor = cbMotores.Text;
+
+            string query = "INSERT INTO Carrito (Nombre_Bicicleta, Nombre_Bateria, Nombre_Motor, Precio_Total) VALUES (@bici, @bateria, @motor, @preciototal)";
+
+            try
             {
-                precioTotal += ObtenerPrecioPorId("Baterias", idBateria);
-            }
+                conn.Open(); // Abre la conexión
+                SqlCommand cmd = new SqlCommand(query, conn);
 
-            // Motores
-            if (cbMotores.SelectedValue != null && int.TryParse(cbMotores.SelectedValue.ToString(), out int idMotor))
+                // Añadir los parámetros
+                cmd.Parameters.AddWithValue("@bici", Bici);
+                cmd.Parameters.AddWithValue("@bateria", Bateria);
+                cmd.Parameters.AddWithValue("@motor", Motor);
+                cmd.Parameters.AddWithValue("@preciototal", precioTotal);
+
+                // Ejecutar la consulta
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
             {
-                precioTotal += ObtenerPrecioPorId("Motores", idMotor);
+                // Manejar cualquier excepción que pueda surgir
+                MessageBox.Show("Error al insertar datos: " + ex.Message);
             }
-
-            // Bicicletas
-            if (cbBicicleta.SelectedValue != null && int.TryParse(cbBicicleta.SelectedValue.ToString(), out int idBicicleta))
+            finally
             {
-                precioTotal += ObtenerPrecioPorId("Bicicletas", idBicicleta);
+
+                // Cerrar la conexión
+                Excel.Application objExcel = new Excel.Application();
+                objExcel.Visible = true;
+                // Crear un nuevo libro de Excel
+                Excel.Workbook objWorkbook = objExcel.Workbooks.Add();
+
+                // Obtener la primera hoja de trabajo del libro
+                Excel.Worksheet objWorksheet = (Excel.Worksheet)objWorkbook.Sheets[1];
+
+                // Agregar encabezados a la hoja de trabajo
+                objWorksheet.Cells[1, 1] = "Nombre Bicicleta";
+                objWorksheet.Cells[1, 2] = "Nombre Bateria";
+                objWorksheet.Cells[1, 3] = "Nombre Motor";
+                objWorksheet.Cells[1, 4] = "Precio Total";
+
+                // Inicializar una variable para el número de fila
+                
+                objWorksheet.Cells[2, 1] = Bici;
+                objWorksheet.Cells[2, 2] = Bateria;
+                objWorksheet.Cells[2, 3] = Motor;
+                objWorksheet.Cells[2, 4] = precioTotal;
+
             }
-            
-            
-
-
-
-
-
-            string query = "INSERT @preciototal INTO Carrito ";
-            SqlCommand cmd = new SqlCommand(query, conn);
-            cmd.Parameters.AddWithValue("@preciototal", precioTotal);
 
         }
     }
