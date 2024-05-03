@@ -78,7 +78,8 @@ namespace PF_48662379Z_49970058M_49478171L
                 {
                     this.Hide();
                     MessageBox.Show("Bienvenido " + user);
-
+                    PanelAdmin panel=new PanelAdmin();
+                    panel.Show();   
 
                 }
                 else
