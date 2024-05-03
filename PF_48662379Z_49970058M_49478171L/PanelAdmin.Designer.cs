@@ -46,6 +46,7 @@
             this.listViewusuarios.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.colum_nombre,
             this.colum_contra});
+            this.listViewusuarios.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewusuarios.HideSelection = false;
             this.listViewusuarios.Location = new System.Drawing.Point(25, 40);
             this.listViewusuarios.Name = "listViewusuarios";
@@ -58,32 +59,36 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(888, 67);
+            this.label1.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(42, 683);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 29);
+            this.label1.Size = new System.Drawing.Size(112, 35);
             this.label1.TabIndex = 1;
             this.label1.Text = "Usuario";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(893, 209);
+            this.label2.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(47, 825);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 29);
+            this.label2.Size = new System.Drawing.Size(159, 35);
             this.label2.TabIndex = 2;
             this.label2.Text = "Contraseña";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(54, 717);
+            this.label3.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(1219, 479);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 29);
+            this.label3.Size = new System.Drawing.Size(0, 35);
             this.label3.TabIndex = 3;
             // 
             // btn_eliminar
             // 
-            this.btn_eliminar.Location = new System.Drawing.Point(659, 717);
+            this.btn_eliminar.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_eliminar.Location = new System.Drawing.Point(533, 708);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(244, 88);
             this.btn_eliminar.TabIndex = 4;
@@ -94,15 +99,17 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 746);
+            this.label4.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(410, 825);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(618, 29);
+            this.label4.Size = new System.Drawing.Size(442, 70);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Seleccione uno y pulse el boton para eliminar un usuario";
+            this.label4.Text = "Seleccione uno en la tabla y pulse\r\nel boton para eliminar un usuario";
             // 
             // btn_añadir
             // 
-            this.btn_añadir.Location = new System.Drawing.Point(893, 365);
+            this.btn_añadir.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_añadir.Location = new System.Drawing.Point(47, 981);
             this.btn_añadir.Name = "btn_añadir";
             this.btn_añadir.Size = new System.Drawing.Size(261, 88);
             this.btn_añadir.TabIndex = 6;
@@ -112,31 +119,35 @@
             // 
             // txb_usuario
             // 
-            this.txb_usuario.Location = new System.Drawing.Point(893, 129);
+            this.txb_usuario.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_usuario.Location = new System.Drawing.Point(47, 745);
             this.txb_usuario.Name = "txb_usuario";
-            this.txb_usuario.Size = new System.Drawing.Size(261, 35);
+            this.txb_usuario.Size = new System.Drawing.Size(261, 51);
             this.txb_usuario.TabIndex = 7;
             // 
             // txb_contraseña
             // 
-            this.txb_contraseña.Location = new System.Drawing.Point(893, 278);
+            this.txb_contraseña.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_contraseña.Location = new System.Drawing.Point(47, 894);
             this.txb_contraseña.Name = "txb_contraseña";
-            this.txb_contraseña.Size = new System.Drawing.Size(261, 35);
+            this.txb_contraseña.Size = new System.Drawing.Size(261, 51);
             this.txb_contraseña.TabIndex = 8;
             // 
             // colum_nombre
             // 
             this.colum_nombre.Text = "Usuario";
+            this.colum_nombre.Width = 366;
             // 
             // colum_contra
             // 
             this.colum_contra.Text = "Contraseña";
+            this.colum_contra.Width = 386;
             // 
             // PanelAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1201, 921);
+            this.ClientSize = new System.Drawing.Size(1912, 1139);
             this.Controls.Add(this.txb_contraseña);
             this.Controls.Add(this.txb_usuario);
             this.Controls.Add(this.btn_añadir);
