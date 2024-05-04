@@ -190,5 +190,122 @@ namespace PF_48662379Z_49970058M_49478171L
             }
 
         }
+
+        private void comboCambiarImagen_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Obtener la opción seleccionada del ComboBox
+
+            string opcionSeleccionada = comboCambiarImagen.SelectedItem.ToString();
+
+            switch (opcionSeleccionada)
+            {
+                case "Paseo":
+                    if (rbazul.Checked)
+                    {
+                        imagenesBicis.Image = Properties.Resources.PaseoAzul; comboCambiarImagen.Text = "";
+                    }
+                    else if (rbnegro.Checked)
+                    {
+                        MessageBox.Show("Color no disponible", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        rbnegro.Checked = false; comboCambiarImagen.Text = "";
+                    }
+                    else if (rbrojo.Checked)
+                    {
+                        imagenesBicis.Image = Properties.Resources.PaseoRoja; comboCambiarImagen.Text = "";
+                    }
+                    else if (rbrosa.Checked)
+                    {
+                        imagenesBicis.Image = Properties.Resources.PaseoRosa; comboCambiarImagen.Text = "";
+                    }
+                    else if (rbverde.Checked)
+                    {
+                        imagenesBicis.Image = Properties.Resources.PaseoVerde; comboCambiarImagen.Text = "";
+                    }
+                    else if (rbnaranja.Checked)
+                    {
+                        MessageBox.Show("Color no disponible", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        rbnaranja.Checked = false; comboCambiarImagen.Text = "";
+                    }
+                    else if (rbneon.Checked)
+                    {
+                        MessageBox.Show("Color no disponible", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        rbneon.Checked = false; comboCambiarImagen.Text = "";
+                    }
+                    break;
+               
+                case "Carretera":
+                    if (rbazul.Checked)
+                    {
+                        imagenesBicis.Image = Properties.Resources.CarreteraAzul; comboCambiarImagen.Text = "";
+                    }
+                    else if (rbnegro.Checked)
+                    {
+                        imagenesBicis.Image = Properties.Resources.BicicletaCarreteraNegra; comboCambiarImagen.Text = "";
+                    }
+                    else if (rbrojo.Checked)
+                    {
+                        imagenesBicis.Image = Properties.Resources.CarreteraRoja; comboCambiarImagen.Text = "";
+                    }
+                    else if (rbrosa.Checked)
+                    {
+                        imagenesBicis.Image = Properties.Resources.CarreteraRosa; comboCambiarImagen.Text = "";
+                    }
+                    else if (rbverde.Checked)
+                    {
+                        imagenesBicis.Image = Properties.Resources.CarreteraVerde; comboCambiarImagen.Text = "";
+                    }
+                    else if (rbnaranja.Checked)
+                    {
+                        MessageBox.Show("Color no disponible", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        rbnaranja.Checked = false; comboCambiarImagen.Text = "";
+                    }
+                    else if (rbneon.Checked)
+                    {
+                        MessageBox.Show("Color no disponible", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        rbneon.Checked = false; comboCambiarImagen.Text = "";
+                    }
+                    break;
+                
+                case "Montaña":
+                    if (rbazul.Checked)
+                    {
+                        imagenesBicis.Image = Properties.Resources.BicicletaMontañaAzul; comboCambiarImagen.Text = "";
+                    }
+                    else if (rbnegro.Checked)
+                    {
+                        MessageBox.Show("Color no disponible", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        rbnegro.Checked = false; comboCambiarImagen.Text = "";
+                    }
+                    else if (rbrojo.Checked)
+                    {
+                        imagenesBicis.Image = Properties.Resources.BicicletaMontañaRoja; comboCambiarImagen.Text = "";
+                    }
+                    else if (rbrosa.Checked)
+                    {
+                        imagenesBicis.Image = Properties.Resources.BicicletaMontañaRosa; comboCambiarImagen.Text = "";
+                    }
+                    else if (rbverde.Checked)
+                    {
+                        imagenesBicis.Image = Properties.Resources.BicicletaMontañaVerde; comboCambiarImagen.Text = "";
+                    }
+                    else if (rbnaranja.Checked)
+                    {
+                        imagenesBicis.Image = Properties.Resources.bicicleta_montaña_naranja; comboCambiarImagen.Text = "";
+                    }
+                    else if (rbneon.Checked)
+                    {
+                        imagenesBicis.Image = Properties.Resources.BicicletaMontañaNeonAzul; comboCambiarImagen.Text = "";
+                    }
+                    
+                    break;
+                
+                default:
+                    // Manejo para la opción por defecto (puede ser vacío o una imagen por defecto)
+                    imagenesBicis.Image = Properties.Resources.ET;
+                    break;
+
+            }
+
+        }
     }
 }

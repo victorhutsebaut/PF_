@@ -118,8 +118,55 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BicicletaCarreteraNegra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BicicletaCarreteraNegra.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BicicletaMontañaAzul" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BicicletaMontañaAzul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BicicletaMontañaNeonAzul" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BicicletaMontañaNeonAzul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BicicletaMontañaRoja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BicicletaMontañaRoja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BicicletaMontañaRosa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BicicletaMontañaRosa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BicicletaMontañaVerde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BicicletaMontañaVerde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BicicletaMontaña_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BicicletaMontaña_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
- 
+  <data name="bicicleta_montaña_naranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bicicleta_montaña_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CarreteraAzul" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CarreteraAzul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CarreteraRoja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CarreteraRoja.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CarreteraRosa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CarreteraRosa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CarreteraVerde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CarreteraVerde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ET" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ET.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PaseoAzul" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PaseoAzul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PaseoRoja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PaseoRoja.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PaseoRosa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PaseoRosa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PaseoVerde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PaseoVerde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
