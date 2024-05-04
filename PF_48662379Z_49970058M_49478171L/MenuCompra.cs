@@ -34,6 +34,7 @@ namespace PF_48662379Z_49970058M_49478171L
             cbBaterias.SelectedIndexChanged += new EventHandler(ComboBoxes_SelectedIndexChanged);
             cbMotores.SelectedIndexChanged += new EventHandler(ComboBoxes_SelectedIndexChanged);
             cbBicicleta.SelectedIndexChanged += new EventHandler(ComboBoxes_SelectedIndexChanged);
+            UpdatePrice();
         }
 
         private decimal ObtenerPrecioPorId(string tableName, int itemId)
@@ -96,13 +97,6 @@ namespace PF_48662379Z_49970058M_49478171L
             }
 
             lPrecio.Text = $"{precioTotal:C}";
-        }
-
-
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Hola");
         }
 
         private void cbModelos_SelectedIndexChanged(object sender, EventArgs e)
@@ -202,99 +196,99 @@ namespace PF_48662379Z_49970058M_49478171L
                 case "Paseo":
                     if (rbazul.Checked)
                     {
-                        imagenesBicis.Image = Properties.Resources.PaseoAzul; comboCambiarImagen.Text = "";
+                        imagenesBicis.Image = Properties.Resources.PaseoAzul; 
                     }
                     else if (rbnegro.Checked)
                     {
                         MessageBox.Show("Color no disponible", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        rbnegro.Checked = false; comboCambiarImagen.Text = "";
+                        rbnegro.Checked = false; 
                     }
                     else if (rbrojo.Checked)
                     {
-                        imagenesBicis.Image = Properties.Resources.PaseoRoja; comboCambiarImagen.Text = "";
+                        imagenesBicis.Image = Properties.Resources.PaseoRoja;
                     }
                     else if (rbrosa.Checked)
                     {
-                        imagenesBicis.Image = Properties.Resources.PaseoRosa; comboCambiarImagen.Text = "";
+                        imagenesBicis.Image = Properties.Resources.PaseoRosa;
                     }
                     else if (rbverde.Checked)
                     {
-                        imagenesBicis.Image = Properties.Resources.PaseoVerde; comboCambiarImagen.Text = "";
+                        imagenesBicis.Image = Properties.Resources.PaseoVerde;
                     }
                     else if (rbnaranja.Checked)
                     {
                         MessageBox.Show("Color no disponible", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        rbnaranja.Checked = false; comboCambiarImagen.Text = "";
+                        rbnaranja.Checked = false;
                     }
                     else if (rbneon.Checked)
                     {
                         MessageBox.Show("Color no disponible", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        rbneon.Checked = false; comboCambiarImagen.Text = "";
+                        rbneon.Checked = false;
                     }
                     break;
                
                 case "Carretera":
                     if (rbazul.Checked)
                     {
-                        imagenesBicis.Image = Properties.Resources.CarreteraAzul; comboCambiarImagen.Text = "";
+                        imagenesBicis.Image = Properties.Resources.CarreteraAzul;
                     }
                     else if (rbnegro.Checked)
                     {
-                        imagenesBicis.Image = Properties.Resources.BicicletaCarreteraNegra; comboCambiarImagen.Text = "";
+                        imagenesBicis.Image = Properties.Resources.BicicletaCarreteraNegra;
                     }
                     else if (rbrojo.Checked)
                     {
-                        imagenesBicis.Image = Properties.Resources.CarreteraRoja; comboCambiarImagen.Text = "";
+                        imagenesBicis.Image = Properties.Resources.CarreteraRoja;
                     }
                     else if (rbrosa.Checked)
                     {
-                        imagenesBicis.Image = Properties.Resources.CarreteraRosa; comboCambiarImagen.Text = "";
+                        imagenesBicis.Image = Properties.Resources.CarreteraRosa;
                     }
                     else if (rbverde.Checked)
                     {
-                        imagenesBicis.Image = Properties.Resources.CarreteraVerde; comboCambiarImagen.Text = "";
+                        imagenesBicis.Image = Properties.Resources.CarreteraVerde;
                     }
                     else if (rbnaranja.Checked)
                     {
                         MessageBox.Show("Color no disponible", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        rbnaranja.Checked = false; comboCambiarImagen.Text = "";
+                        rbnaranja.Checked = false;
                     }
                     else if (rbneon.Checked)
                     {
                         MessageBox.Show("Color no disponible", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        rbneon.Checked = false; comboCambiarImagen.Text = "";
+                        rbneon.Checked = false;
                     }
                     break;
                 
                 case "Montaña":
                     if (rbazul.Checked)
                     {
-                        imagenesBicis.Image = Properties.Resources.BicicletaMontañaAzul; comboCambiarImagen.Text = "";
+                        imagenesBicis.Image = Properties.Resources.BicicletaMontañaAzul;
                     }
                     else if (rbnegro.Checked)
                     {
                         MessageBox.Show("Color no disponible", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        rbnegro.Checked = false; comboCambiarImagen.Text = "";
+                        rbnegro.Checked = false;
                     }
                     else if (rbrojo.Checked)
                     {
-                        imagenesBicis.Image = Properties.Resources.BicicletaMontañaRoja; comboCambiarImagen.Text = "";
+                        imagenesBicis.Image = Properties.Resources.BicicletaMontañaRoja;
                     }
                     else if (rbrosa.Checked)
                     {
-                        imagenesBicis.Image = Properties.Resources.BicicletaMontañaRosa; comboCambiarImagen.Text = "";
+                        imagenesBicis.Image = Properties.Resources.BicicletaMontañaRosa;
                     }
                     else if (rbverde.Checked)
                     {
-                        imagenesBicis.Image = Properties.Resources.BicicletaMontañaVerde; comboCambiarImagen.Text = "";
+                        imagenesBicis.Image = Properties.Resources.BicicletaMontañaVerde;
                     }
                     else if (rbnaranja.Checked)
                     {
-                        imagenesBicis.Image = Properties.Resources.bicicleta_montaña_naranja; comboCambiarImagen.Text = "";
+                        imagenesBicis.Image = Properties.Resources.bicicleta_montaña_naranja;
                     }
                     else if (rbneon.Checked)
                     {
-                        imagenesBicis.Image = Properties.Resources.BicicletaMontañaNeonAzul; comboCambiarImagen.Text = "";
+                        imagenesBicis.Image = Properties.Resources.BicicletaMontañaNeonAzul;
                     }
                     
                     break;

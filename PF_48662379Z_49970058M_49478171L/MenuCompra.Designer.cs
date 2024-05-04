@@ -47,6 +47,11 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btn_carrito = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lneon = new System.Windows.Forms.Label();
+            this.rbneon = new System.Windows.Forms.RadioButton();
+            this.lnaranja = new System.Windows.Forms.Label();
+            this.rbnaranja = new System.Windows.Forms.RadioButton();
             this.imagenesBicis = new System.Windows.Forms.PictureBox();
             this.rbrosa = new System.Windows.Forms.RadioButton();
             this.lrosa = new System.Windows.Forms.Label();
@@ -59,11 +64,6 @@
             this.lrojo = new System.Windows.Forms.Label();
             this.rbnegro = new System.Windows.Forms.RadioButton();
             this.comboCambiarImagen = new System.Windows.Forms.ComboBox();
-            this.lnaranja = new System.Windows.Forms.Label();
-            this.rbnaranja = new System.Windows.Forms.RadioButton();
-            this.lneon = new System.Windows.Forms.Label();
-            this.rbneon = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bicicletasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bateriasBindingSource)).BeginInit();
@@ -251,6 +251,63 @@
             this.tabPage2.Text = "MODELOS";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(311, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(280, 26);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "SELECCIONA 1º UN COLOR";
+            // 
+            // lneon
+            // 
+            this.lneon.AutoSize = true;
+            this.lneon.BackColor = System.Drawing.Color.Aqua;
+            this.lneon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lneon.Location = new System.Drawing.Point(430, 122);
+            this.lneon.Name = "lneon";
+            this.lneon.Size = new System.Drawing.Size(32, 28);
+            this.lneon.TabIndex = 17;
+            this.lneon.Text = "   ";
+            // 
+            // rbneon
+            // 
+            this.rbneon.AutoSize = true;
+            this.rbneon.BackColor = System.Drawing.Color.Transparent;
+            this.rbneon.Location = new System.Drawing.Point(435, 151);
+            this.rbneon.Name = "rbneon";
+            this.rbneon.Size = new System.Drawing.Size(17, 16);
+            this.rbneon.TabIndex = 16;
+            this.rbneon.TabStop = true;
+            this.rbneon.UseCompatibleTextRendering = true;
+            this.rbneon.UseVisualStyleBackColor = false;
+            this.rbneon.CheckedChanged += new System.EventHandler(this.comboCambiarImagen_SelectedIndexChanged);
+            // 
+            // lnaranja
+            // 
+            this.lnaranja.AutoSize = true;
+            this.lnaranja.BackColor = System.Drawing.Color.OrangeRed;
+            this.lnaranja.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lnaranja.Location = new System.Drawing.Point(370, 122);
+            this.lnaranja.Name = "lnaranja";
+            this.lnaranja.Size = new System.Drawing.Size(32, 28);
+            this.lnaranja.TabIndex = 15;
+            this.lnaranja.Text = "   ";
+            // 
+            // rbnaranja
+            // 
+            this.rbnaranja.AutoSize = true;
+            this.rbnaranja.BackColor = System.Drawing.Color.Transparent;
+            this.rbnaranja.Location = new System.Drawing.Point(375, 151);
+            this.rbnaranja.Name = "rbnaranja";
+            this.rbnaranja.Size = new System.Drawing.Size(17, 16);
+            this.rbnaranja.TabIndex = 14;
+            this.rbnaranja.TabStop = true;
+            this.rbnaranja.UseCompatibleTextRendering = true;
+            this.rbnaranja.UseVisualStyleBackColor = false;
+            this.rbnaranja.CheckedChanged += new System.EventHandler(this.comboCambiarImagen_SelectedIndexChanged);
+            // 
             // imagenesBicis
             // 
             this.imagenesBicis.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -272,6 +329,7 @@
             this.rbrosa.TabStop = true;
             this.rbrosa.UseCompatibleTextRendering = true;
             this.rbrosa.UseVisualStyleBackColor = false;
+            this.rbrosa.CheckedChanged += new System.EventHandler(this.comboCambiarImagen_SelectedIndexChanged);
             // 
             // lrosa
             // 
@@ -295,6 +353,7 @@
             this.rbrojo.TabStop = true;
             this.rbrojo.UseCompatibleTextRendering = true;
             this.rbrojo.UseVisualStyleBackColor = false;
+            this.rbrojo.CheckedChanged += new System.EventHandler(this.comboCambiarImagen_SelectedIndexChanged);
             // 
             // rbverde
             // 
@@ -307,6 +366,7 @@
             this.rbverde.TabStop = true;
             this.rbverde.UseCompatibleTextRendering = true;
             this.rbverde.UseVisualStyleBackColor = false;
+            this.rbverde.CheckedChanged += new System.EventHandler(this.comboCambiarImagen_SelectedIndexChanged);
             // 
             // rbazul
             // 
@@ -319,6 +379,7 @@
             this.rbazul.TabStop = true;
             this.rbazul.UseCompatibleTextRendering = true;
             this.rbazul.UseVisualStyleBackColor = false;
+            this.rbazul.CheckedChanged += new System.EventHandler(this.comboCambiarImagen_SelectedIndexChanged);
             // 
             // lnegro
             // 
@@ -375,6 +436,7 @@
             this.rbnegro.TabStop = true;
             this.rbnegro.UseCompatibleTextRendering = true;
             this.rbnegro.UseVisualStyleBackColor = false;
+            this.rbnegro.CheckedChanged += new System.EventHandler(this.comboCambiarImagen_SelectedIndexChanged);
             // 
             // comboCambiarImagen
             // 
@@ -389,61 +451,6 @@
             this.comboCambiarImagen.Size = new System.Drawing.Size(121, 34);
             this.comboCambiarImagen.TabIndex = 0;
             this.comboCambiarImagen.SelectedIndexChanged += new System.EventHandler(this.comboCambiarImagen_SelectedIndexChanged);
-            // 
-            // lnaranja
-            // 
-            this.lnaranja.AutoSize = true;
-            this.lnaranja.BackColor = System.Drawing.Color.OrangeRed;
-            this.lnaranja.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lnaranja.Location = new System.Drawing.Point(370, 122);
-            this.lnaranja.Name = "lnaranja";
-            this.lnaranja.Size = new System.Drawing.Size(32, 28);
-            this.lnaranja.TabIndex = 15;
-            this.lnaranja.Text = "   ";
-            // 
-            // rbnaranja
-            // 
-            this.rbnaranja.AutoSize = true;
-            this.rbnaranja.BackColor = System.Drawing.Color.Transparent;
-            this.rbnaranja.Location = new System.Drawing.Point(375, 151);
-            this.rbnaranja.Name = "rbnaranja";
-            this.rbnaranja.Size = new System.Drawing.Size(17, 16);
-            this.rbnaranja.TabIndex = 14;
-            this.rbnaranja.TabStop = true;
-            this.rbnaranja.UseCompatibleTextRendering = true;
-            this.rbnaranja.UseVisualStyleBackColor = false;
-            // 
-            // lneon
-            // 
-            this.lneon.AutoSize = true;
-            this.lneon.BackColor = System.Drawing.Color.Aqua;
-            this.lneon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lneon.Location = new System.Drawing.Point(430, 122);
-            this.lneon.Name = "lneon";
-            this.lneon.Size = new System.Drawing.Size(32, 28);
-            this.lneon.TabIndex = 17;
-            this.lneon.Text = "   ";
-            // 
-            // rbneon
-            // 
-            this.rbneon.AutoSize = true;
-            this.rbneon.BackColor = System.Drawing.Color.Transparent;
-            this.rbneon.Location = new System.Drawing.Point(435, 151);
-            this.rbneon.Name = "rbneon";
-            this.rbneon.Size = new System.Drawing.Size(17, 16);
-            this.rbneon.TabIndex = 16;
-            this.rbneon.TabStop = true;
-            this.rbneon.UseCompatibleTextRendering = true;
-            this.rbneon.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(311, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(280, 26);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "SELECCIONA 1º UN COLOR";
             // 
             // MenuCompra
             // 
