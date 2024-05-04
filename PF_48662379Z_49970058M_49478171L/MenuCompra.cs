@@ -141,7 +141,7 @@ namespace PF_48662379Z_49970058M_49478171L
             string Bateria = cbBaterias.Text;
             string Motor = cbMotores.Text;
 
-            string query = "INSERT INTO Carrito (Nombre_Bicicleta, Nombre_Bateria, Nombre_Motor, Precio_Total) VALUES (@bici, @bateria, @motor, @preciototal)";
+            string query = "INSERT INTO  Compras(Nombre_Bicicleta, Nombre_Bateria, Nombre_Motor, Precio_Total) VALUES (@bici, @bateria, @motor, @preciototal)";
 
             try
             {
