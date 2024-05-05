@@ -143,6 +143,16 @@ namespace PF_48662379Z_49970058M_49478171L.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_2024_05_05_162704 {
+            get {
+                object obj = ResourceManager.GetObject("Captura_de_pantalla_2024_05_05_162704", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CarreteraAzul {
             get {
                 object obj = ResourceManager.GetObject("CarreteraAzul", resourceCulture);
@@ -176,6 +186,16 @@ namespace PF_48662379Z_49970058M_49478171L.Properties {
         internal static System.Drawing.Bitmap CarreteraVerde {
             get {
                 object obj = ResourceManager.GetObject("CarreteraVerde", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edu {
+            get {
+                object obj = ResourceManager.GetObject("edu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -226,6 +246,16 @@ namespace PF_48662379Z_49970058M_49478171L.Properties {
         internal static System.Drawing.Bitmap PaseoVerde {
             get {
                 object obj = ResourceManager.GetObject("PaseoVerde", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vict {
+            get {
+                object obj = ResourceManager.GetObject("vict", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

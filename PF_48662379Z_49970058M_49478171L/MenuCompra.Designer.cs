@@ -61,6 +61,11 @@
             this.rbnegro = new System.Windows.Forms.RadioButton();
             this.btn_carrito = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.modelosimagen = new System.Windows.Forms.PictureBox();
+            this.modeloscomprar = new System.Windows.Forms.Button();
+            this.modeloscombobox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.bicicletasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bateriasBindingSource)).BeginInit();
@@ -70,6 +75,8 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagenesBicis)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.modelosimagen)).BeginInit();
             this.SuspendLayout();
             // 
             // cbBicicleta
@@ -400,6 +407,11 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.textBox2);
+            this.tabPage2.Controls.Add(this.textBox1);
+            this.tabPage2.Controls.Add(this.modelosimagen);
+            this.tabPage2.Controls.Add(this.modeloscomprar);
+            this.tabPage2.Controls.Add(this.modeloscombobox);
             this.tabPage2.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -409,6 +421,58 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "MODELOS";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(464, 204);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 40);
+            this.textBox2.TabIndex = 51;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(464, 137);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(262, 40);
+            this.textBox1.TabIndex = 50;
+            // 
+            // modelosimagen
+            // 
+            this.modelosimagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.modelosimagen.Location = new System.Drawing.Point(109, 69);
+            this.modelosimagen.Name = "modelosimagen";
+            this.modelosimagen.Size = new System.Drawing.Size(335, 254);
+            this.modelosimagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.modelosimagen.TabIndex = 49;
+            this.modelosimagen.TabStop = false;
+            // 
+            // modeloscomprar
+            // 
+            this.modeloscomprar.Location = new System.Drawing.Point(464, 282);
+            this.modeloscomprar.Margin = new System.Windows.Forms.Padding(1);
+            this.modeloscomprar.Name = "modeloscomprar";
+            this.modeloscomprar.Size = new System.Drawing.Size(167, 41);
+            this.modeloscomprar.TabIndex = 38;
+            this.modeloscomprar.Text = "Comprar";
+            this.modeloscomprar.UseVisualStyleBackColor = true;
+            this.modeloscomprar.Click += new System.EventHandler(this.modeloscomprar_Click);
+            // 
+            // modeloscombobox
+            // 
+            this.modeloscombobox.DisplayMember = "ID";
+            this.modeloscombobox.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modeloscombobox.FormattingEnabled = true;
+            this.modeloscombobox.Items.AddRange(new object[] {
+            "Bicicleta Alejandro",
+            "Bicicleta Edu",
+            "Bicicleta Victor"});
+            this.modeloscombobox.Location = new System.Drawing.Point(464, 85);
+            this.modeloscombobox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.modeloscombobox.Name = "modeloscombobox";
+            this.modeloscombobox.Size = new System.Drawing.Size(188, 30);
+            this.modeloscombobox.TabIndex = 34;
+            this.modeloscombobox.ValueMember = "ID";
+            this.modeloscombobox.SelectedIndexChanged += new System.EventHandler(this.modeloscombobox_SelectedIndexChanged);
             // 
             // MenuCompra
             // 
@@ -430,6 +494,9 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagenesBicis)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.modelosimagen)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -468,5 +535,10 @@
         private System.Windows.Forms.Label lazul;
         private System.Windows.Forms.Label lrojo;
         private System.Windows.Forms.RadioButton rbnegro;
+        private System.Windows.Forms.PictureBox modelosimagen;
+        private System.Windows.Forms.Button modeloscomprar;
+        private System.Windows.Forms.ComboBox modeloscombobox;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

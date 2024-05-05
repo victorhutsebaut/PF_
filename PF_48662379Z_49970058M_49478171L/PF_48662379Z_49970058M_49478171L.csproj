@@ -194,15 +194,18 @@
     <Content Include="Resources\BicicletaMontañaRosa.png" />
     <Content Include="Resources\BicicletaMontañaVerde.png" />
     <Content Include="Resources\bicicleta_montaña_naranja.png" />
+    <Content Include="Resources\Captura de pantalla 2024-05-05 162704.png" />
     <Content Include="Resources\CarreteraAzul.png" />
     <Content Include="Resources\CarreteraRoja.jpg" />
     <Content Include="Resources\CarreteraRosa.png" />
     <Content Include="Resources\CarreteraVerde.png" />
+    <Content Include="Resources\edu.png" />
     <Content Include="Resources\ET.png" />
     <Content Include="Resources\PaseoAzul.png" />
     <Content Include="Resources\PaseoRoja.jpg" />
     <Content Include="Resources\PaseoRosa.png" />
     <Content Include="Resources\PaseoVerde.png" />
+    <Content Include="Resources\vict.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

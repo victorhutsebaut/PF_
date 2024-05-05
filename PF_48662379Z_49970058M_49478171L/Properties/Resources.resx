@@ -142,6 +142,9 @@
   <data name="bicicleta_montaña_naranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bicicleta_montaña_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Captura_de_pantalla_2024_05_05_162704" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Captura de pantalla 2024-05-05 162704.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="CarreteraAzul" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CarreteraAzul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -153,6 +156,9 @@
   </data>
   <data name="CarreteraVerde" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CarreteraVerde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="edu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ET" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ET.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -168,5 +174,8 @@
   </data>
   <data name="PaseoVerde" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PaseoVerde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vict" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vict.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
