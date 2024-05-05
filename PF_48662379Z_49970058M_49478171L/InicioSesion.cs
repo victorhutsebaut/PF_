@@ -77,7 +77,6 @@ namespace PF_48662379Z_49970058M_49478171L
                 if (midatareader.Read())
                 {
                     this.Hide();
-                    MessageBox.Show("Bienvenido " + user);
                     PanelAdmin panel=new PanelAdmin();
                     panel.Show();   
 
@@ -116,7 +115,6 @@ namespace PF_48662379Z_49970058M_49478171L
                 if (midatareader.Read())
                 {
                     this.Hide();
-                    MessageBox.Show("Bienvenido " + user);
                     MenuCompra menuCompra = new MenuCompra();
                     menuCompra.Show();
 

@@ -55,6 +55,11 @@
     <Compile Include="CrearUsuario.Designer.cs">
       <DependentUpon>CrearUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatasetModelos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatasetModelos.xsd</DependentUpon>
+    </Compile>
     <Compile Include="InicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +131,17 @@
     <EmbeddedResource Include="RegistroUsuarios.resx">
       <DependentUpon>RegistroUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DatasetModelos.xsc">
+      <DependentUpon>DatasetModelos.xsd</DependentUpon>
+    </None>
+    <None Include="DatasetModelos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatasetModelos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DatasetModelos.xss">
+      <DependentUpon>DatasetModelos.xsd</DependentUpon>
+    </None>
     <None Include="masterDataSet.xsc">
       <DependentUpon>masterDataSet.xsd</DependentUpon>
     </None>

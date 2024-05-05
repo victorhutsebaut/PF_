@@ -63,7 +63,7 @@ namespace PF_48662379Z_49970058M_49478171L
         {
             UpdatePrice();
         }
-        
+
         private void UpdatePrice()
         {
 
@@ -210,6 +210,8 @@ namespace PF_48662379Z_49970058M_49478171L
         }
         private void MenuCompra_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'datasetModelos.ModelosPreestablecidos' Puede moverla o quitarla según sea necesario.
+            this.modelosPreestablecidosTableAdapter.Fill(this.datasetModelos.ModelosPreestablecidos);
             // TODO: esta línea de código carga datos en la tabla 'masterDataSet3.Motores' Puede moverla o quitarla según sea necesario.
             this.motoresTableAdapter.Fill(this.masterDataSet3.Motores);
             // TODO: esta línea de código carga datos en la tabla 'masterDataSet2.Baterias' Puede moverla o quitarla según sea necesario.
@@ -279,7 +281,7 @@ namespace PF_48662379Z_49970058M_49478171L
                 objWorksheet.Cells[1, 4] = "Precio Total";
 
                 // Inicializar una variable para el número de fila
-                
+
                 objWorksheet.Cells[2, 1] = Bici;
                 objWorksheet.Cells[2, 2] = Bateria;
                 objWorksheet.Cells[2, 3] = Motor;
@@ -289,127 +291,145 @@ namespace PF_48662379Z_49970058M_49478171L
 
         }
 
-        private void CambiarColor(object sender, EventArgs e)
-        {
-
-        }
 
         private void modeloscombobox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            String hola =modeloscombobox.SelectedItem as String;
-            
-            
-            switch (hola)
+            String nombreModelo = modeloscombobox.Text as String;
+
+            switch (nombreModelo)
             {
                 case "Bicicleta Alejandro":
-                    
+
                     using (SqlConnection connection = new SqlConnection("Data Source=(local)\\SQLEXPRESS;Initial Catalog=master;Integrated Security=True"))
                     {
-                        string query = "SELECT NombreModelo, Descripcion, PrecioBase, Imagen FROM dbo.ModelosPreestablecidos WHERE NombreModelo = @NombreModelo"; // Consulta SQL para seleccionar los datos
-
-                        SqlCommand command = new SqlCommand(query, connection);
-                        command.Parameters.AddWithValue("@NombreModelo", hola); // Agregar parámetro para evitar inyección de SQL
-
+                        string query = "SELECT NombreModelo, Descripcion, PrecioBase FROM dbo.ModelosPrestablecidos WHERE NombreModelo = @NombreModelo"; // Consulta SQL para seleccionar los datos
                         connection.Open();
-
-                        SqlDataReader reader = command.ExecuteReader();
-
-                        while (reader.Read())
+                        using (SqlCommand command = new SqlCommand(query, connection))
                         {
-                            textBox1.Text = (string)reader["Descripcion"];
-                            textBox2.Text = ((decimal)reader["PrecioBase"]).ToString(); // Convertir el valor a string
-                            byte[] imgData = (byte[])reader["Imagen"]; // Convertir datos de imagen a byte[]
-                            using (MemoryStream ms = new MemoryStream(imgData)) // Usar using para liberar recursos correctamente
+                            command.Parameters.AddWithValue("@NombreModelo", nombreModelo); // Agregar parámetro para evitar inyección de SQL
+
+
+
+                            SqlDataReader reader = command.ExecuteReader();
+
+                            while (reader.Read())
                             {
-                                modelosimagen.Image = System.Drawing.Image.FromStream(ms); // Mostrar la imagen en el control de imagen
+                                tbDescripcion.Text = (string)reader["Descripcion"];
+                                lPrecioModelos.Text = ((decimal)reader["PrecioBase"]).ToString(); // Convertir el valor a string
+
+                                {
+                                    modelosimagen.Image = Properties.Resources.CarreteraAzul; // Mostrar la imagen en el control de imagen
+                                }
                             }
+
+                            reader.Close();
                         }
 
-                        reader.Close();
                     }
 
                     break;
+
                 case "Bicicleta Edu":
-                    using (SqlConnection connection = new SqlConnection("Data Source=(local)\\SQLEXPRESS;Initial Catalog=nombreDeTuBaseDeDatos;Integrated Security=True"))
+                    using (SqlConnection connection = new SqlConnection("Data Source=(local)\\SQLEXPRESS;Initial Catalog=master;Integrated Security=True"))
                     {
-                        string query = "SELECT NombreModelo, Descripcion, PrecioBase, Imagen FROM dbo.ModelosPreestablecidos WHERE NombreModelo = @NombreModelo"; // Consulta SQL para seleccionar los datos
-
-                        SqlCommand command = new SqlCommand(query, connection);
-                        command.Parameters.AddWithValue("@NombreModelo", hola); // Agregar parámetro para evitar inyección de SQL
-
+                        string query = "SELECT NombreModelo, Descripcion, PrecioBase FROM dbo.ModelosPrestablecidos WHERE NombreModelo = @NombreModelo"; // Consulta SQL para seleccionar los datos
                         connection.Open();
-
-                        SqlDataReader reader = command.ExecuteReader();
-
-                        while (reader.Read())
+                        using (SqlCommand command = new SqlCommand(query, connection))
                         {
-                            textBox1.Text = (string)reader["Descripcion"];
-                            textBox2.Text = ((decimal)reader["PrecioBase"]).ToString(); // Convertir el valor a string
-                            byte[] imgData = (byte[])reader["Imagen"]; // Convertir datos de imagen a byte[]
-                            using (MemoryStream ms = new MemoryStream(imgData)) // Usar using para liberar recursos correctamente
+                            command.Parameters.AddWithValue("@NombreModelo", nombreModelo); // Agregar parámetro para evitar inyección de SQL
+
+
+
+                            SqlDataReader reader = command.ExecuteReader();
+
+                            while (reader.Read())
                             {
-                                modelosimagen.Image = System.Drawing.Image.FromStream(ms); // Mostrar la imagen en el control de imagen
+                                tbDescripcion.Text = (string)reader["Descripcion"];
+                                lPrecioModelos.Text = ((decimal)reader["PrecioBase"]).ToString(); // Convertir el valor a string
+
+                                {
+                                    modelosimagen.Image = Properties.Resources.PaseoRoja; // Mostrar la imagen en el control de imagen
+                                }
                             }
+
+                            reader.Close();
                         }
 
-                        reader.Close();
                     }
                     break;
+
                 case "Bicicleta Victor":
-                    using (SqlConnection connection = new SqlConnection("Data Source=(local)\\SQLEXPRESS;Initial Catalog=nombreDeTuBaseDeDatos;Integrated Security=True"))
+                    using (SqlConnection connection = new SqlConnection("Data Source=(local)\\SQLEXPRESS;Initial Catalog=master;Integrated Security=True"))
                     {
-                        string query = "SELECT NombreModelo, Descripcion, PrecioBase, Imagen FROM dbo.ModelosPreestablecidos WHERE NombreModelo = @NombreModelo"; // Consulta SQL para seleccionar los datos
-
-                        SqlCommand command = new SqlCommand(query, connection);
-                        command.Parameters.AddWithValue("@NombreModelo", hola); // Agregar parámetro para evitar inyección de SQL
-
+                        string query = "SELECT NombreModelo, Descripcion, PrecioBase FROM dbo.ModelosPrestablecidos WHERE NombreModelo = @NombreModelo"; // Consulta SQL para seleccionar los datos
                         connection.Open();
-
-                        SqlDataReader reader = command.ExecuteReader();
-
-                        while (reader.Read())
+                        using (SqlCommand command = new SqlCommand(query, connection))
                         {
-                            textBox1.Text = (string)reader["Descripcion"];
-                            textBox2.Text = ((decimal)reader["PrecioBase"]).ToString(); // Convertir el valor a string
-                            byte[] imgData = (byte[])reader["Imagen"]; // Convertir datos de imagen a byte[]
-                            using (MemoryStream ms = new MemoryStream(imgData)) // Usar using para liberar recursos correctamente
+                            command.Parameters.AddWithValue("@NombreModelo", nombreModelo); // Agregar parámetro para evitar inyección de SQL
+
+
+
+                            SqlDataReader reader = command.ExecuteReader();
+
+                            while (reader.Read())
                             {
-                                modelosimagen.Image = System.Drawing.Image.FromStream(ms); // Mostrar la imagen en el control de imagen
+                                tbDescripcion.Text = (string)reader["Descripcion"];
+                                lPrecioModelos.Text = ((decimal)reader["PrecioBase"]).ToString(); // Convertir el valor a string
+
+                                {
+                                    modelosimagen.Image = Properties.Resources.BicicletaMontañaRoja; // Mostrar la imagen en el control de imagen
+                                }
                             }
+
+                            reader.Close();
                         }
 
-                        reader.Close();
                     }
                     break;
-                
+
             }
         }
 
         private void modeloscomprar_Click(object sender, EventArgs e)
         {
-
             string connectionString = "server=(local)\\SQLEXPRESS;database=master; Integrated Security = SSPI";
             SqlConnection conn = new SqlConnection(connectionString);
 
-            string Bici = cbBicicleta.Text;
-            string Bateria = cbBaterias.Text;
-            string Motor = cbMotores.Text;
+            int modeloId = (int)modeloscombobox.SelectedValue;
+            decimal precioTotal = 0; // Inicializar el precio total
 
-            string query = "INSERT INTO  Compras(Nombre_Bicicleta, Nombre_Bateria, Nombre_Motor, Precio_Total) VALUES (@bici, @bateria, @motor, @preciototal)";
+            string queryRecuperar = "SELECT NombreModelo, Descripcion, PrecioBase FROM ModelosPrestablecidos WHERE ModeloID = @ModeloID";
+            string queryInsertar = "INSERT INTO Compras (Nombre_Bicicleta, Nombre_Bateria, Nombre_Motor, Precio_Total) VALUES (@bici, @bateria, @motor, @preciototal)";
 
             try
             {
                 conn.Open(); // Abre la conexión
-                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlCommand cmdRecuperar = new SqlCommand(queryRecuperar, conn);
+                cmdRecuperar.Parameters.AddWithValue("@ModeloID", modeloId);
 
-                // Añadir los parámetros
-                cmd.Parameters.AddWithValue("@bici", Bici);
-                cmd.Parameters.AddWithValue("@bateria", Bateria);
-                cmd.Parameters.AddWithValue("@motor", Motor);
-                cmd.Parameters.AddWithValue("@preciototal", precioTotal);
+                // Ejecutar la consulta de recuperación
+                SqlDataReader reader = cmdRecuperar.ExecuteReader();
+                if (reader.Read())
+                {
+                    string Bici = reader["NombreModelo"].ToString();
+                    decimal PrecioBase = (decimal)reader["PrecioBase"];
+                    precioTotal += PrecioBase; // Sumar al precio total
 
-                // Ejecutar la consulta
-                cmd.ExecuteNonQuery();
+                    reader.Close(); // Cerrar el lector
+
+                    // Insertar en la tabla Compras
+                    SqlCommand cmdInsertar = new SqlCommand(queryInsertar, conn);
+                    cmdInsertar.Parameters.AddWithValue("@bici", Bici);
+                    cmdInsertar.Parameters.AddWithValue("@bateria", "Default"); // Aquí asumimos valores predeterminados o los obtienes de otro modo
+                    cmdInsertar.Parameters.AddWithValue("@motor", "Default"); // Aquí asumimos valores predeterminados o los obtienes de otro modo
+                    cmdInsertar.Parameters.AddWithValue("@preciototal", precioTotal);
+
+                    // Ejecutar la consulta de inserción
+                    cmdInsertar.ExecuteNonQuery();
+
+                    // Mostrar en Excel
+                    MostrarExcel(Bici, "Default", "Default", precioTotal);
+                }
             }
             catch (Exception ex)
             {
@@ -418,31 +438,30 @@ namespace PF_48662379Z_49970058M_49478171L
             }
             finally
             {
-
                 // Cerrar la conexión
-                Excel.Application objExcel = new Excel.Application();
-                objExcel.Visible = true;
-                // Crear un nuevo libro de Excel
-                Excel.Workbook objWorkbook = objExcel.Workbooks.Add();
-
-                // Obtener la primera hoja de trabajo del libro
-                Excel.Worksheet objWorksheet = (Excel.Worksheet)objWorkbook.Sheets[1];
-
-                // Agregar encabezados a la hoja de trabajo
-                objWorksheet.Cells[1, 1] = "Nombre Bicicleta";
-                objWorksheet.Cells[1, 2] = "Nombre Bateria";
-                objWorksheet.Cells[1, 3] = "Nombre Motor";
-                objWorksheet.Cells[1, 4] = "Precio Total";
-
-                // Inicializar una variable para el número de fila
-
-                objWorksheet.Cells[2, 1] = Bici;
-                objWorksheet.Cells[2, 2] = Bateria;
-                objWorksheet.Cells[2, 3] = Motor;
-                objWorksheet.Cells[2, 4] = precioTotal;
-
+                conn.Close();
             }
-
         }
+
+        private void MostrarExcel(string bici, string bateria, string motor, decimal precioTotal)
+        {
+            Excel.Application objExcel = new Excel.Application();
+            objExcel.Visible = true;
+            // Crear un nuevo libro de Excel
+            Excel.Workbook objWorkbook = objExcel.Workbooks.Add();
+            // Obtener la primera hoja de trabajo del libro
+            Excel.Worksheet objWorksheet = (Excel.Worksheet)objWorkbook.Sheets[1];
+            // Agregar encabezados a la hoja de trabajo
+            objWorksheet.Cells[1, 1] = "Nombre Bicicleta";
+            objWorksheet.Cells[1, 2] = "Nombre Bateria";
+            objWorksheet.Cells[1, 3] = "Nombre Motor";
+            objWorksheet.Cells[1, 4] = "Precio Total";
+            // Añadir datos
+            objWorksheet.Cells[2, 1] = bici;
+            objWorksheet.Cells[2, 2] = bateria;
+            objWorksheet.Cells[2, 3] = motor;
+            objWorksheet.Cells[2, 4] = precioTotal;
+        }
+
     }
 }

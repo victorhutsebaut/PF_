@@ -60,12 +60,15 @@
             this.lrojo = new System.Windows.Forms.Label();
             this.rbnegro = new System.Windows.Forms.RadioButton();
             this.btn_carrito = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.modelosimagen = new System.Windows.Forms.PictureBox();
-            this.modeloscomprar = new System.Windows.Forms.Button();
             this.modeloscombobox = new System.Windows.Forms.ComboBox();
+            this.modeloscomprar = new System.Windows.Forms.Button();
+            this.modelosimagen = new System.Windows.Forms.PictureBox();
+            this.tbDescripcion = new System.Windows.Forms.TextBox();
+            this.lPrecioModelos = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.datasetModelos = new PF_48662379Z_49970058M_49478171L.DatasetModelos();
+            this.modelosPreestablecidosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.modelosPreestablecidosTableAdapter = new PF_48662379Z_49970058M_49478171L.DatasetModelosTableAdapters.ModelosPreestablecidosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.bicicletasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bateriasBindingSource)).BeginInit();
@@ -75,8 +78,10 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagenesBicis)).BeginInit();
-            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.modelosimagen)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datasetModelos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modelosPreestablecidosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // cbBicicleta
@@ -85,7 +90,7 @@
             this.cbBicicleta.DisplayMember = "NombreModelo";
             this.cbBicicleta.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbBicicleta.FormattingEnabled = true;
-            this.cbBicicleta.Location = new System.Drawing.Point(385, 212);
+            this.cbBicicleta.Location = new System.Drawing.Point(501, 202);
             this.cbBicicleta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbBicicleta.Name = "cbBicicleta";
             this.cbBicicleta.Size = new System.Drawing.Size(188, 30);
@@ -109,7 +114,7 @@
             this.cbBaterias.DisplayMember = "Nombre";
             this.cbBaterias.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbBaterias.FormattingEnabled = true;
-            this.cbBaterias.Location = new System.Drawing.Point(385, 249);
+            this.cbBaterias.Location = new System.Drawing.Point(501, 239);
             this.cbBaterias.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbBaterias.Name = "cbBaterias";
             this.cbBaterias.Size = new System.Drawing.Size(188, 30);
@@ -132,7 +137,7 @@
             this.cbMotores.DisplayMember = "Nombre";
             this.cbMotores.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMotores.FormattingEnabled = true;
-            this.cbMotores.Location = new System.Drawing.Point(385, 284);
+            this.cbMotores.Location = new System.Drawing.Point(501, 274);
             this.cbMotores.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbMotores.Name = "cbMotores";
             this.cbMotores.Size = new System.Drawing.Size(188, 30);
@@ -153,7 +158,7 @@
             // 
             this.lPrecio.AutoSize = true;
             this.lPrecio.Font = new System.Drawing.Font("Yu Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lPrecio.Location = new System.Drawing.Point(380, 327);
+            this.lPrecio.Location = new System.Drawing.Point(496, 317);
             this.lPrecio.Name = "lPrecio";
             this.lPrecio.Size = new System.Drawing.Size(55, 36);
             this.lPrecio.TabIndex = 4;
@@ -221,7 +226,7 @@
             this.lneon.AutoSize = true;
             this.lneon.BackColor = System.Drawing.Color.Aqua;
             this.lneon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lneon.Location = new System.Drawing.Point(441, 157);
+            this.lneon.Location = new System.Drawing.Point(557, 147);
             this.lneon.Name = "lneon";
             this.lneon.Size = new System.Drawing.Size(32, 28);
             this.lneon.TabIndex = 33;
@@ -231,7 +236,7 @@
             // 
             this.rbneon.AutoSize = true;
             this.rbneon.BackColor = System.Drawing.Color.Transparent;
-            this.rbneon.Location = new System.Drawing.Point(446, 186);
+            this.rbneon.Location = new System.Drawing.Point(562, 176);
             this.rbneon.Name = "rbneon";
             this.rbneon.Size = new System.Drawing.Size(17, 16);
             this.rbneon.TabIndex = 32;
@@ -245,7 +250,7 @@
             this.lnaranja.AutoSize = true;
             this.lnaranja.BackColor = System.Drawing.Color.OrangeRed;
             this.lnaranja.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lnaranja.Location = new System.Drawing.Point(381, 157);
+            this.lnaranja.Location = new System.Drawing.Point(497, 147);
             this.lnaranja.Name = "lnaranja";
             this.lnaranja.Size = new System.Drawing.Size(32, 28);
             this.lnaranja.TabIndex = 31;
@@ -255,7 +260,7 @@
             // 
             this.rbnaranja.AutoSize = true;
             this.rbnaranja.BackColor = System.Drawing.Color.Transparent;
-            this.rbnaranja.Location = new System.Drawing.Point(386, 186);
+            this.rbnaranja.Location = new System.Drawing.Point(502, 176);
             this.rbnaranja.Name = "rbnaranja";
             this.rbnaranja.Size = new System.Drawing.Size(17, 16);
             this.rbnaranja.TabIndex = 30;
@@ -269,7 +274,7 @@
             this.imagenesBicis.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.imagenesBicis.Location = new System.Drawing.Point(31, 82);
             this.imagenesBicis.Name = "imagenesBicis";
-            this.imagenesBicis.Size = new System.Drawing.Size(335, 254);
+            this.imagenesBicis.Size = new System.Drawing.Size(431, 324);
             this.imagenesBicis.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imagenesBicis.TabIndex = 29;
             this.imagenesBicis.TabStop = false;
@@ -278,7 +283,7 @@
             // 
             this.rbrosa.AutoSize = true;
             this.rbrosa.BackColor = System.Drawing.Color.Transparent;
-            this.rbrosa.Location = new System.Drawing.Point(498, 186);
+            this.rbrosa.Location = new System.Drawing.Point(614, 176);
             this.rbrosa.Name = "rbrosa";
             this.rbrosa.Size = new System.Drawing.Size(17, 16);
             this.rbrosa.TabIndex = 28;
@@ -292,7 +297,7 @@
             this.lrosa.AutoSize = true;
             this.lrosa.BackColor = System.Drawing.Color.HotPink;
             this.lrosa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lrosa.Location = new System.Drawing.Point(493, 157);
+            this.lrosa.Location = new System.Drawing.Point(609, 147);
             this.lrosa.Name = "lrosa";
             this.lrosa.Size = new System.Drawing.Size(32, 28);
             this.lrosa.TabIndex = 27;
@@ -302,7 +307,7 @@
             // 
             this.rbrojo.AutoSize = true;
             this.rbrojo.BackColor = System.Drawing.Color.Transparent;
-            this.rbrojo.Location = new System.Drawing.Point(446, 127);
+            this.rbrojo.Location = new System.Drawing.Point(562, 117);
             this.rbrojo.Name = "rbrojo";
             this.rbrojo.Size = new System.Drawing.Size(17, 16);
             this.rbrojo.TabIndex = 26;
@@ -315,7 +320,7 @@
             // 
             this.rbverde.AutoSize = true;
             this.rbverde.BackColor = System.Drawing.Color.Transparent;
-            this.rbverde.Location = new System.Drawing.Point(498, 127);
+            this.rbverde.Location = new System.Drawing.Point(614, 117);
             this.rbverde.Name = "rbverde";
             this.rbverde.Size = new System.Drawing.Size(17, 16);
             this.rbverde.TabIndex = 25;
@@ -328,7 +333,7 @@
             // 
             this.rbazul.AutoSize = true;
             this.rbazul.BackColor = System.Drawing.Color.Transparent;
-            this.rbazul.Location = new System.Drawing.Point(557, 127);
+            this.rbazul.Location = new System.Drawing.Point(673, 117);
             this.rbazul.Name = "rbazul";
             this.rbazul.Size = new System.Drawing.Size(17, 16);
             this.rbazul.TabIndex = 24;
@@ -342,7 +347,7 @@
             this.lnegro.AutoSize = true;
             this.lnegro.BackColor = System.Drawing.Color.Black;
             this.lnegro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lnegro.Location = new System.Drawing.Point(381, 98);
+            this.lnegro.Location = new System.Drawing.Point(497, 88);
             this.lnegro.Name = "lnegro";
             this.lnegro.Size = new System.Drawing.Size(32, 28);
             this.lnegro.TabIndex = 23;
@@ -353,7 +358,7 @@
             this.lverde.AutoSize = true;
             this.lverde.BackColor = System.Drawing.Color.Lime;
             this.lverde.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lverde.Location = new System.Drawing.Point(493, 98);
+            this.lverde.Location = new System.Drawing.Point(609, 88);
             this.lverde.Name = "lverde";
             this.lverde.Size = new System.Drawing.Size(32, 28);
             this.lverde.TabIndex = 22;
@@ -364,7 +369,7 @@
             this.lazul.AutoSize = true;
             this.lazul.BackColor = System.Drawing.Color.DodgerBlue;
             this.lazul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lazul.Location = new System.Drawing.Point(552, 98);
+            this.lazul.Location = new System.Drawing.Point(668, 88);
             this.lazul.Name = "lazul";
             this.lazul.Size = new System.Drawing.Size(32, 28);
             this.lazul.TabIndex = 21;
@@ -375,7 +380,7 @@
             this.lrojo.AutoSize = true;
             this.lrojo.BackColor = System.Drawing.Color.Red;
             this.lrojo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lrojo.Location = new System.Drawing.Point(441, 98);
+            this.lrojo.Location = new System.Drawing.Point(557, 88);
             this.lrojo.Name = "lrojo";
             this.lrojo.Size = new System.Drawing.Size(32, 28);
             this.lrojo.TabIndex = 20;
@@ -385,7 +390,7 @@
             // 
             this.rbnegro.AutoSize = true;
             this.rbnegro.BackColor = System.Drawing.Color.Transparent;
-            this.rbnegro.Location = new System.Drawing.Point(386, 127);
+            this.rbnegro.Location = new System.Drawing.Point(502, 117);
             this.rbnegro.Name = "rbnegro";
             this.rbnegro.Size = new System.Drawing.Size(17, 16);
             this.rbnegro.TabIndex = 19;
@@ -396,7 +401,7 @@
             // 
             // btn_carrito
             // 
-            this.btn_carrito.Location = new System.Drawing.Point(386, 375);
+            this.btn_carrito.Location = new System.Drawing.Point(502, 365);
             this.btn_carrito.Margin = new System.Windows.Forms.Padding(1);
             this.btn_carrito.Name = "btn_carrito";
             this.btn_carrito.Size = new System.Drawing.Size(167, 41);
@@ -405,10 +410,63 @@
             this.btn_carrito.UseVisualStyleBackColor = true;
             this.btn_carrito.Click += new System.EventHandler(this.btn_carrito_Click);
             // 
+            // modeloscombobox
+            // 
+            this.modeloscombobox.DataSource = this.modelosPreestablecidosBindingSource;
+            this.modeloscombobox.DisplayMember = "NombreModelo";
+            this.modeloscombobox.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modeloscombobox.FormattingEnabled = true;
+            this.modeloscombobox.Location = new System.Drawing.Point(464, 85);
+            this.modeloscombobox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.modeloscombobox.Name = "modeloscombobox";
+            this.modeloscombobox.Size = new System.Drawing.Size(188, 30);
+            this.modeloscombobox.TabIndex = 34;
+            this.modeloscombobox.ValueMember = "ModeloID";
+            this.modeloscombobox.SelectedIndexChanged += new System.EventHandler(this.modeloscombobox_SelectedIndexChanged);
+            // 
+            // modeloscomprar
+            // 
+            this.modeloscomprar.Location = new System.Drawing.Point(464, 282);
+            this.modeloscomprar.Margin = new System.Windows.Forms.Padding(1);
+            this.modeloscomprar.Name = "modeloscomprar";
+            this.modeloscomprar.Size = new System.Drawing.Size(167, 41);
+            this.modeloscomprar.TabIndex = 38;
+            this.modeloscomprar.Text = "Comprar";
+            this.modeloscomprar.UseVisualStyleBackColor = true;
+            this.modeloscomprar.Click += new System.EventHandler(this.modeloscomprar_Click);
+            // 
+            // modelosimagen
+            // 
+            this.modelosimagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.modelosimagen.Location = new System.Drawing.Point(33, 85);
+            this.modelosimagen.Name = "modelosimagen";
+            this.modelosimagen.Size = new System.Drawing.Size(419, 272);
+            this.modelosimagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.modelosimagen.TabIndex = 49;
+            this.modelosimagen.TabStop = false;
+            // 
+            // tbDescripcion
+            // 
+            this.tbDescripcion.Location = new System.Drawing.Point(464, 137);
+            this.tbDescripcion.Multiline = true;
+            this.tbDescripcion.Name = "tbDescripcion";
+            this.tbDescripcion.Size = new System.Drawing.Size(262, 88);
+            this.tbDescripcion.TabIndex = 50;
+            // 
+            // lPrecioModelos
+            // 
+            this.lPrecioModelos.AutoSize = true;
+            this.lPrecioModelos.Font = new System.Drawing.Font("Yu Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lPrecioModelos.Location = new System.Drawing.Point(458, 228);
+            this.lPrecioModelos.Name = "lPrecioModelos";
+            this.lPrecioModelos.Size = new System.Drawing.Size(55, 36);
+            this.lPrecioModelos.TabIndex = 52;
+            this.lPrecioModelos.Text = "0 €";
+            // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.textBox2);
-            this.tabPage2.Controls.Add(this.textBox1);
+            this.tabPage2.Controls.Add(this.lPrecioModelos);
+            this.tabPage2.Controls.Add(this.tbDescripcion);
             this.tabPage2.Controls.Add(this.modelosimagen);
             this.tabPage2.Controls.Add(this.modeloscomprar);
             this.tabPage2.Controls.Add(this.modeloscombobox);
@@ -422,57 +480,19 @@
             this.tabPage2.Text = "MODELOS";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // datasetModelos
             // 
-            this.textBox2.Location = new System.Drawing.Point(481, 217);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 40);
-            this.textBox2.TabIndex = 51;
+            this.datasetModelos.DataSetName = "DatasetModelos";
+            this.datasetModelos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // textBox1
+            // modelosPreestablecidosBindingSource
             // 
-            this.textBox1.Location = new System.Drawing.Point(464, 137);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(262, 40);
-            this.textBox1.TabIndex = 50;
+            this.modelosPreestablecidosBindingSource.DataMember = "ModelosPreestablecidos";
+            this.modelosPreestablecidosBindingSource.DataSource = this.datasetModelos;
             // 
-            // modelosimagen
+            // modelosPreestablecidosTableAdapter
             // 
-            this.modelosimagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.modelosimagen.Location = new System.Drawing.Point(109, 69);
-            this.modelosimagen.Name = "modelosimagen";
-            this.modelosimagen.Size = new System.Drawing.Size(335, 254);
-            this.modelosimagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.modelosimagen.TabIndex = 49;
-            this.modelosimagen.TabStop = false;
-            // 
-            // modeloscomprar
-            // 
-            this.modeloscomprar.Location = new System.Drawing.Point(464, 282);
-            this.modeloscomprar.Margin = new System.Windows.Forms.Padding(1);
-            this.modeloscomprar.Name = "modeloscomprar";
-            this.modeloscomprar.Size = new System.Drawing.Size(167, 41);
-            this.modeloscomprar.TabIndex = 38;
-            this.modeloscomprar.Text = "Comprar";
-            this.modeloscomprar.UseVisualStyleBackColor = true;
-            this.modeloscomprar.Click += new System.EventHandler(this.modeloscomprar_Click);
-            // 
-            // modeloscombobox
-            // 
-            this.modeloscombobox.DisplayMember = "ID";
-            this.modeloscombobox.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modeloscombobox.FormattingEnabled = true;
-            this.modeloscombobox.Items.AddRange(new object[] {
-            "Bicicleta Alejandro",
-            "Bicicleta Edu",
-            "Bicicleta Victor"});
-            this.modeloscombobox.Location = new System.Drawing.Point(464, 85);
-            this.modeloscombobox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.modeloscombobox.Name = "modeloscombobox";
-            this.modeloscombobox.Size = new System.Drawing.Size(188, 30);
-            this.modeloscombobox.TabIndex = 34;
-            this.modeloscombobox.ValueMember = "ID";
-            this.modeloscombobox.SelectedIndexChanged += new System.EventHandler(this.modeloscombobox_SelectedIndexChanged);
+            this.modelosPreestablecidosTableAdapter.ClearBeforeFill = true;
             // 
             // MenuCompra
             // 
@@ -494,9 +514,11 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagenesBicis)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modelosimagen)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.modelosimagen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datasetModelos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modelosPreestablecidosBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -518,7 +540,6 @@
         private masterDataSet3TableAdapters.MotoresTableAdapter motoresTableAdapter;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button btn_carrito;
         private System.Windows.Forms.Label lneon;
         private System.Windows.Forms.RadioButton rbneon;
@@ -535,10 +556,14 @@
         private System.Windows.Forms.Label lazul;
         private System.Windows.Forms.Label lrojo;
         private System.Windows.Forms.RadioButton rbnegro;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Label lPrecioModelos;
+        private System.Windows.Forms.TextBox tbDescripcion;
         private System.Windows.Forms.PictureBox modelosimagen;
         private System.Windows.Forms.Button modeloscomprar;
         private System.Windows.Forms.ComboBox modeloscombobox;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private DatasetModelos datasetModelos;
+        private System.Windows.Forms.BindingSource modelosPreestablecidosBindingSource;
+        private DatasetModelosTableAdapters.ModelosPreestablecidosTableAdapter modelosPreestablecidosTableAdapter;
     }
 }
