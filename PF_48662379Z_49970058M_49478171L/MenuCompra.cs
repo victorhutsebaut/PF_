@@ -15,26 +15,13 @@ namespace PF_48662379Z_49970058M_49478171L
 {
     public partial class MenuCompra : Form
     {
-        public class ComboBoxItem
-        {
-            public string Text { get; set; }
-            public int Value { get; set; }
-
-            // Sobreescribe el método ToString para asegurar que el texto correcto se muestra en el ComboBox.
-            public override string ToString()
-            {
-                return Text;
-            }
-        }
-
+        public decimal precioTotal = 0;
         public MenuCompra()
         {
             InitializeComponent();
 
             cbBaterias.SelectedIndexChanged += new EventHandler(ComboBoxes_SelectedIndexChanged);
             cbMotores.SelectedIndexChanged += new EventHandler(ComboBoxes_SelectedIndexChanged);
-            cbBicicleta.SelectedIndexChanged += new EventHandler(ComboBoxes_SelectedIndexChanged);
-            UpdatePrice();
         }
 
         private decimal ObtenerPrecioPorId(string tableName, int itemId)
@@ -73,11 +60,11 @@ namespace PF_48662379Z_49970058M_49478171L
         {
             UpdatePrice();
         }
-        public decimal precioTotal = 0;
+        
         private void UpdatePrice()
         {
-            
 
+            precioTotal = 0;
             // Baterías
             if (cbBaterias.SelectedValue != null && int.TryParse(cbBaterias.SelectedValue.ToString(), out int idBateria))
             {
@@ -101,9 +88,123 @@ namespace PF_48662379Z_49970058M_49478171L
 
         private void cbModelos_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            UpdatePrice();
+            CambiarColor();
         }
 
+        private void CambiarColor()
+        {
+            string opcionSeleccionada = cbBicicleta.Text;
+
+            switch (opcionSeleccionada)
+            {
+                case "Paseo":
+                    if (rbazul.Checked)
+                    {
+                        imagenesBicis.Image = Properties.Resources.PaseoAzul;
+                    }
+                    else if (rbnegro.Checked)
+                    {
+                        MessageBox.Show("Color no disponible", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        rbnegro.Checked = false;
+                    }
+                    else if (rbrojo.Checked)
+                    {
+                        imagenesBicis.Image = Properties.Resources.PaseoRoja;
+                    }
+                    else if (rbrosa.Checked)
+                    {
+                        imagenesBicis.Image = Properties.Resources.PaseoRosa;
+                    }
+                    else if (rbverde.Checked)
+                    {
+                        imagenesBicis.Image = Properties.Resources.PaseoVerde;
+                    }
+                    else if (rbnaranja.Checked)
+                    {
+                        MessageBox.Show("Color no disponible", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        rbnaranja.Checked = false;
+                    }
+                    else if (rbneon.Checked)
+                    {
+                        MessageBox.Show("Color no disponible", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        rbneon.Checked = false;
+                    }
+                    break;
+
+                case "Carretera":
+                    if (rbazul.Checked)
+                    {
+                        imagenesBicis.Image = Properties.Resources.CarreteraAzul;
+                    }
+                    else if (rbnegro.Checked)
+                    {
+                        imagenesBicis.Image = Properties.Resources.BicicletaCarreteraNegra;
+                    }
+                    else if (rbrojo.Checked)
+                    {
+                        imagenesBicis.Image = Properties.Resources.CarreteraRoja;
+                    }
+                    else if (rbrosa.Checked)
+                    {
+                        imagenesBicis.Image = Properties.Resources.CarreteraRosa;
+                    }
+                    else if (rbverde.Checked)
+                    {
+                        imagenesBicis.Image = Properties.Resources.CarreteraVerde;
+                    }
+                    else if (rbnaranja.Checked)
+                    {
+                        MessageBox.Show("Color no disponible", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        rbnaranja.Checked = false;
+                    }
+                    else if (rbneon.Checked)
+                    {
+                        MessageBox.Show("Color no disponible", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        rbneon.Checked = false;
+                    }
+                    break;
+
+                case "Montaña":
+                    if (rbazul.Checked)
+                    {
+                        imagenesBicis.Image = Properties.Resources.BicicletaMontañaAzul;
+                    }
+                    else if (rbnegro.Checked)
+                    {
+                        MessageBox.Show("Color no disponible", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        rbnegro.Checked = false;
+                    }
+                    else if (rbrojo.Checked)
+                    {
+                        imagenesBicis.Image = Properties.Resources.BicicletaMontañaRoja;
+                    }
+                    else if (rbrosa.Checked)
+                    {
+                        imagenesBicis.Image = Properties.Resources.BicicletaMontañaRosa;
+                    }
+                    else if (rbverde.Checked)
+                    {
+                        imagenesBicis.Image = Properties.Resources.BicicletaMontañaVerde;
+                    }
+                    else if (rbnaranja.Checked)
+                    {
+                        imagenesBicis.Image = Properties.Resources.bicicleta_montaña_naranja;
+                    }
+                    else if (rbneon.Checked)
+                    {
+                        imagenesBicis.Image = Properties.Resources.BicicletaMontañaNeonAzul;
+                    }
+
+                    break;
+
+                default:
+                    // Manejo para la opción por defecto (puede ser vacío o una imagen por defecto)
+                    imagenesBicis.Image = Properties.Resources.ET;
+                    break;
+
+            }
+        }
         private void MenuCompra_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'masterDataSet3.Motores' Puede moverla o quitarla según sea necesario.
@@ -185,120 +286,8 @@ namespace PF_48662379Z_49970058M_49478171L
 
         }
 
-        private void comboCambiarImagen_SelectedIndexChanged(object sender, EventArgs e)
+        private void CambiarColor(object sender, EventArgs e)
         {
-            // Obtener la opción seleccionada del ComboBox
-
-            string opcionSeleccionada = comboCambiarImagen.SelectedItem.ToString();
-
-            switch (opcionSeleccionada)
-            {
-                case "Paseo":
-                    if (rbazul.Checked)
-                    {
-                        imagenesBicis.Image = Properties.Resources.PaseoAzul; 
-                    }
-                    else if (rbnegro.Checked)
-                    {
-                        MessageBox.Show("Color no disponible", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        rbnegro.Checked = false; 
-                    }
-                    else if (rbrojo.Checked)
-                    {
-                        imagenesBicis.Image = Properties.Resources.PaseoRoja;
-                    }
-                    else if (rbrosa.Checked)
-                    {
-                        imagenesBicis.Image = Properties.Resources.PaseoRosa;
-                    }
-                    else if (rbverde.Checked)
-                    {
-                        imagenesBicis.Image = Properties.Resources.PaseoVerde;
-                    }
-                    else if (rbnaranja.Checked)
-                    {
-                        MessageBox.Show("Color no disponible", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        rbnaranja.Checked = false;
-                    }
-                    else if (rbneon.Checked)
-                    {
-                        MessageBox.Show("Color no disponible", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        rbneon.Checked = false;
-                    }
-                    break;
-               
-                case "Carretera":
-                    if (rbazul.Checked)
-                    {
-                        imagenesBicis.Image = Properties.Resources.CarreteraAzul;
-                    }
-                    else if (rbnegro.Checked)
-                    {
-                        imagenesBicis.Image = Properties.Resources.BicicletaCarreteraNegra;
-                    }
-                    else if (rbrojo.Checked)
-                    {
-                        imagenesBicis.Image = Properties.Resources.CarreteraRoja;
-                    }
-                    else if (rbrosa.Checked)
-                    {
-                        imagenesBicis.Image = Properties.Resources.CarreteraRosa;
-                    }
-                    else if (rbverde.Checked)
-                    {
-                        imagenesBicis.Image = Properties.Resources.CarreteraVerde;
-                    }
-                    else if (rbnaranja.Checked)
-                    {
-                        MessageBox.Show("Color no disponible", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        rbnaranja.Checked = false;
-                    }
-                    else if (rbneon.Checked)
-                    {
-                        MessageBox.Show("Color no disponible", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        rbneon.Checked = false;
-                    }
-                    break;
-                
-                case "Montaña":
-                    if (rbazul.Checked)
-                    {
-                        imagenesBicis.Image = Properties.Resources.BicicletaMontañaAzul;
-                    }
-                    else if (rbnegro.Checked)
-                    {
-                        MessageBox.Show("Color no disponible", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        rbnegro.Checked = false;
-                    }
-                    else if (rbrojo.Checked)
-                    {
-                        imagenesBicis.Image = Properties.Resources.BicicletaMontañaRoja;
-                    }
-                    else if (rbrosa.Checked)
-                    {
-                        imagenesBicis.Image = Properties.Resources.BicicletaMontañaRosa;
-                    }
-                    else if (rbverde.Checked)
-                    {
-                        imagenesBicis.Image = Properties.Resources.BicicletaMontañaVerde;
-                    }
-                    else if (rbnaranja.Checked)
-                    {
-                        imagenesBicis.Image = Properties.Resources.bicicleta_montaña_naranja;
-                    }
-                    else if (rbneon.Checked)
-                    {
-                        imagenesBicis.Image = Properties.Resources.BicicletaMontañaNeonAzul;
-                    }
-                    
-                    break;
-                
-                default:
-                    // Manejo para la opción por defecto (puede ser vacío o una imagen por defecto)
-                    imagenesBicis.Image = Properties.Resources.ET;
-                    break;
-
-            }
 
         }
     }
