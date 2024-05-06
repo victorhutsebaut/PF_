@@ -60,15 +60,18 @@
             this.lrojo = new System.Windows.Forms.Label();
             this.rbnegro = new System.Windows.Forms.RadioButton();
             this.btn_carrito = new System.Windows.Forms.Button();
-            this.modeloscombobox = new System.Windows.Forms.ComboBox();
-            this.modeloscomprar = new System.Windows.Forms.Button();
-            this.modelosimagen = new System.Windows.Forms.PictureBox();
-            this.tbDescripcion = new System.Windows.Forms.TextBox();
-            this.lPrecioModelos = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.datasetModelos = new PF_48662379Z_49970058M_49478171L.DatasetModelos();
+            this.lPrecioModelos = new System.Windows.Forms.Label();
+            this.tbDescripcion = new System.Windows.Forms.TextBox();
+            this.modelosimagen = new System.Windows.Forms.PictureBox();
+            this.modeloscomprar = new System.Windows.Forms.Button();
+            this.modeloscombobox = new System.Windows.Forms.ComboBox();
             this.modelosPreestablecidosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.datasetModelos = new PF_48662379Z_49970058M_49478171L.DatasetModelos();
             this.modelosPreestablecidosTableAdapter = new PF_48662379Z_49970058M_49478171L.DatasetModelosTableAdapters.ModelosPreestablecidosTableAdapter();
+            this.masterDataSet4 = new PF_48662379Z_49970058M_49478171L.masterDataSet4();
+            this.modelosPrestablecidosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.modelosPrestablecidosTableAdapter = new PF_48662379Z_49970058M_49478171L.masterDataSet4TableAdapters.ModelosPrestablecidosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.bicicletasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bateriasBindingSource)).BeginInit();
@@ -78,10 +81,13 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagenesBicis)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.modelosimagen)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datasetModelos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modelosimagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.modelosPreestablecidosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datasetModelos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datasetModelos.ModelosPrestablecidos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modelosPrestablecidosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // cbBicicleta
@@ -410,59 +416,6 @@
             this.btn_carrito.UseVisualStyleBackColor = true;
             this.btn_carrito.Click += new System.EventHandler(this.btn_carrito_Click);
             // 
-            // modeloscombobox
-            // 
-            this.modeloscombobox.DataSource = this.modelosPreestablecidosBindingSource;
-            this.modeloscombobox.DisplayMember = "NombreModelo";
-            this.modeloscombobox.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modeloscombobox.FormattingEnabled = true;
-            this.modeloscombobox.Location = new System.Drawing.Point(464, 85);
-            this.modeloscombobox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.modeloscombobox.Name = "modeloscombobox";
-            this.modeloscombobox.Size = new System.Drawing.Size(188, 30);
-            this.modeloscombobox.TabIndex = 34;
-            this.modeloscombobox.ValueMember = "ModeloID";
-            this.modeloscombobox.SelectedIndexChanged += new System.EventHandler(this.modeloscombobox_SelectedIndexChanged);
-            // 
-            // modeloscomprar
-            // 
-            this.modeloscomprar.Location = new System.Drawing.Point(464, 282);
-            this.modeloscomprar.Margin = new System.Windows.Forms.Padding(1);
-            this.modeloscomprar.Name = "modeloscomprar";
-            this.modeloscomprar.Size = new System.Drawing.Size(167, 41);
-            this.modeloscomprar.TabIndex = 38;
-            this.modeloscomprar.Text = "Comprar";
-            this.modeloscomprar.UseVisualStyleBackColor = true;
-            this.modeloscomprar.Click += new System.EventHandler(this.modeloscomprar_Click);
-            // 
-            // modelosimagen
-            // 
-            this.modelosimagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.modelosimagen.Location = new System.Drawing.Point(33, 85);
-            this.modelosimagen.Name = "modelosimagen";
-            this.modelosimagen.Size = new System.Drawing.Size(419, 272);
-            this.modelosimagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.modelosimagen.TabIndex = 49;
-            this.modelosimagen.TabStop = false;
-            // 
-            // tbDescripcion
-            // 
-            this.tbDescripcion.Location = new System.Drawing.Point(464, 137);
-            this.tbDescripcion.Multiline = true;
-            this.tbDescripcion.Name = "tbDescripcion";
-            this.tbDescripcion.Size = new System.Drawing.Size(262, 88);
-            this.tbDescripcion.TabIndex = 50;
-            // 
-            // lPrecioModelos
-            // 
-            this.lPrecioModelos.AutoSize = true;
-            this.lPrecioModelos.Font = new System.Drawing.Font("Yu Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lPrecioModelos.Location = new System.Drawing.Point(458, 228);
-            this.lPrecioModelos.Name = "lPrecioModelos";
-            this.lPrecioModelos.Size = new System.Drawing.Size(55, 36);
-            this.lPrecioModelos.TabIndex = 52;
-            this.lPrecioModelos.Text = "0 €";
-            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.lPrecioModelos);
@@ -480,19 +433,93 @@
             this.tabPage2.Text = "MODELOS";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // datasetModelos
+            // lPrecioModelos
             // 
-            this.datasetModelos.DataSetName = "DatasetModelos";
-            this.datasetModelos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.lPrecioModelos.AutoSize = true;
+            this.lPrecioModelos.Font = new System.Drawing.Font("Yu Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lPrecioModelos.Location = new System.Drawing.Point(458, 228);
+            this.lPrecioModelos.Name = "lPrecioModelos";
+            this.lPrecioModelos.Size = new System.Drawing.Size(55, 36);
+            this.lPrecioModelos.TabIndex = 52;
+            this.lPrecioModelos.Text = "0 €";
+            // 
+            // tbDescripcion
+            // 
+            this.tbDescripcion.Location = new System.Drawing.Point(464, 137);
+            this.tbDescripcion.Multiline = true;
+            this.tbDescripcion.Name = "tbDescripcion";
+            this.tbDescripcion.Size = new System.Drawing.Size(262, 88);
+            this.tbDescripcion.TabIndex = 50;
+            // 
+            // modelosimagen
+            // 
+            this.modelosimagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.modelosimagen.Location = new System.Drawing.Point(33, 85);
+            this.modelosimagen.Name = "modelosimagen";
+            this.modelosimagen.Size = new System.Drawing.Size(419, 272);
+            this.modelosimagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.modelosimagen.TabIndex = 49;
+            this.modelosimagen.TabStop = false;
+            // 
+            // modeloscomprar
+            // 
+            this.modeloscomprar.Location = new System.Drawing.Point(464, 282);
+            this.modeloscomprar.Margin = new System.Windows.Forms.Padding(1);
+            this.modeloscomprar.Name = "modeloscomprar";
+            this.modeloscomprar.Size = new System.Drawing.Size(167, 41);
+            this.modeloscomprar.TabIndex = 38;
+            this.modeloscomprar.Text = "Comprar";
+            this.modeloscomprar.UseVisualStyleBackColor = true;
+            this.modeloscomprar.Click += new System.EventHandler(this.modeloscomprar_Click);
+            // 
+            // modeloscombobox
+            // 
+            this.modeloscombobox.DataSource = this.modelosPrestablecidosBindingSource;
+            this.modeloscombobox.DisplayMember = "NombreModelo";
+            this.modeloscombobox.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modeloscombobox.FormattingEnabled = true;
+            this.modeloscombobox.Location = new System.Drawing.Point(464, 85);
+            this.modeloscombobox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.modeloscombobox.Name = "modeloscombobox";
+            this.modeloscombobox.Size = new System.Drawing.Size(188, 30);
+            this.modeloscombobox.TabIndex = 34;
+            this.modeloscombobox.ValueMember = "ModeloID";
+            this.modeloscombobox.SelectedIndexChanged += new System.EventHandler(this.modeloscombobox_SelectedIndexChanged);
             // 
             // modelosPreestablecidosBindingSource
             // 
             this.modelosPreestablecidosBindingSource.DataMember = "ModelosPreestablecidos";
             this.modelosPreestablecidosBindingSource.DataSource = this.datasetModelos;
             // 
+            // datasetModelos
+            // 
+            this.datasetModelos.DataSetName = "DatasetModelos";
+            // 
+            // 
+            // 
+            this.datasetModelos.ModelosPrestablecidos.Constraints.AddRange(new System.Data.Constraint[] {
+            new System.Data.UniqueConstraint("Constraint1", new string[] {
+                        "ModeloID"}, true)});
+            this.datasetModelos.ModelosPrestablecidos.TableName = "ModelosPreestablecidos";
+            this.datasetModelos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // modelosPreestablecidosTableAdapter
             // 
             this.modelosPreestablecidosTableAdapter.ClearBeforeFill = true;
+            // 
+            // masterDataSet4
+            // 
+            this.masterDataSet4.DataSetName = "masterDataSet4";
+            this.masterDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // modelosPrestablecidosBindingSource
+            // 
+            this.modelosPrestablecidosBindingSource.DataMember = "ModelosPrestablecidos";
+            this.modelosPrestablecidosBindingSource.DataSource = this.masterDataSet4;
+            // 
+            // modelosPrestablecidosTableAdapter
+            // 
+            this.modelosPrestablecidosTableAdapter.ClearBeforeFill = true;
             // 
             // MenuCompra
             // 
@@ -514,11 +541,14 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagenesBicis)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.modelosimagen)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datasetModelos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modelosimagen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.modelosPreestablecidosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datasetModelos.ModelosPrestablecidos)).EndInit();
+           // ((System.ComponentModel.ISupportInitialize)(this.datasetModelos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modelosPrestablecidosBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -565,5 +595,8 @@
         private DatasetModelos datasetModelos;
         private System.Windows.Forms.BindingSource modelosPreestablecidosBindingSource;
         private DatasetModelosTableAdapters.ModelosPreestablecidosTableAdapter modelosPreestablecidosTableAdapter;
+        private masterDataSet4 masterDataSet4;
+        private System.Windows.Forms.BindingSource modelosPrestablecidosBindingSource;
+        private masterDataSet4TableAdapters.ModelosPrestablecidosTableAdapter modelosPrestablecidosTableAdapter;
     }
 }

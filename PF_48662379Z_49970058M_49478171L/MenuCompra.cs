@@ -210,9 +210,9 @@ namespace PF_48662379Z_49970058M_49478171L
         }
         private void MenuCompra_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'masterDataSet4.ModelosPrestablecidos' Puede moverla o quitarla según sea necesario.
+            this.modelosPrestablecidosTableAdapter.Fill(this.masterDataSet4.ModelosPrestablecidos);
             // TODO: esta línea de código carga datos en la tabla 'datasetModelos.ModelosPreestablecidos' Puede moverla o quitarla según sea necesario.
-            this.modelosPreestablecidosTableAdapter.Fill(this.datasetModelos.ModelosPreestablecidos);
-            // TODO: esta línea de código carga datos en la tabla 'masterDataSet3.Motores' Puede moverla o quitarla según sea necesario.
             this.motoresTableAdapter.Fill(this.masterDataSet3.Motores);
             // TODO: esta línea de código carga datos en la tabla 'masterDataSet2.Baterias' Puede moverla o quitarla según sea necesario.
             this.bateriasTableAdapter.Fill(this.masterDataSet2.Baterias);

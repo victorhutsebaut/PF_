@@ -20,17 +20,17 @@ namespace PF_48662379Z_49970058M_49478171L {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DatasetModelos")]
+    [global::System.Xml.Serialization.XmlRootAttribute("masterDataSet4")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DatasetModelos : global::System.Data.DataSet {
+    public partial class masterDataSet4 : global::System.Data.DataSet {
         
-        private ModelosPreestablecidosDataTable tableModelosPreestablecidos;
+        private ModelosPrestablecidosDataTable tableModelosPrestablecidos;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public DatasetModelos() {
+        public masterDataSet4() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace PF_48662379Z_49970058M_49478171L {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected DatasetModelos(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected masterDataSet4(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace PF_48662379Z_49970058M_49478171L {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["ModelosPreestablecidos"] != null)) {
-                    base.Tables.Add(new ModelosPreestablecidosDataTable(ds.Tables["ModelosPreestablecidos"]));
+                if ((ds.Tables["ModelosPrestablecidos"] != null)) {
+                    base.Tables.Add(new ModelosPrestablecidosDataTable(ds.Tables["ModelosPrestablecidos"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace PF_48662379Z_49970058M_49478171L {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public ModelosPreestablecidosDataTable ModelosPrestablecidos {
+        public ModelosPrestablecidosDataTable ModelosPrestablecidos {
             get {
-                return this.tableModelosPreestablecidos;
+                return this.tableModelosPrestablecidos;
             }
         }
         
@@ -127,7 +127,7 @@ namespace PF_48662379Z_49970058M_49478171L {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DatasetModelos cln = ((DatasetModelos)(base.Clone()));
+            masterDataSet4 cln = ((masterDataSet4)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace PF_48662379Z_49970058M_49478171L {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["ModelosPreestablecidos"] != null)) {
-                    base.Tables.Add(new ModelosPreestablecidosDataTable(ds.Tables["ModelosPreestablecidos"]));
+                if ((ds.Tables["ModelosPrestablecidos"] != null)) {
+                    base.Tables.Add(new ModelosPrestablecidosDataTable(ds.Tables["ModelosPrestablecidos"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace PF_48662379Z_49970058M_49478171L {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableModelosPreestablecidos = ((ModelosPreestablecidosDataTable)(base.Tables["ModelosPreestablecidos"]));
+            this.tableModelosPrestablecidos = ((ModelosPrestablecidosDataTable)(base.Tables["ModelosPrestablecidos"]));
             if ((initTable == true)) {
-                if ((this.tableModelosPreestablecidos != null)) {
-                    this.tableModelosPreestablecidos.InitVars();
+                if ((this.tableModelosPrestablecidos != null)) {
+                    this.tableModelosPrestablecidos.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace PF_48662379Z_49970058M_49478171L {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DatasetModelos";
+            this.DataSetName = "masterDataSet4";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DatasetModelos.xsd";
+            this.Namespace = "http://tempuri.org/masterDataSet4.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableModelosPreestablecidos = new ModelosPreestablecidosDataTable();
-            base.Tables.Add(this.tableModelosPreestablecidos);
+            this.tableModelosPrestablecidos = new ModelosPrestablecidosDataTable();
+            base.Tables.Add(this.tableModelosPrestablecidos);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeModelosPreestablecidos() {
+        private bool ShouldSerializeModelosPrestablecidos() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace PF_48662379Z_49970058M_49478171L {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DatasetModelos ds = new DatasetModelos();
+            masterDataSet4 ds = new masterDataSet4();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,14 +270,14 @@ namespace PF_48662379Z_49970058M_49478171L {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void ModelosPreestablecidosRowChangeEventHandler(object sender, ModelosPreestablecidosRowChangeEvent e);
+        public delegate void ModelosPrestablecidosRowChangeEventHandler(object sender, ModelosPrestablecidosRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class ModelosPreestablecidosDataTable : global::System.Data.TypedTableBase<ModelosPreestablecidosRow> {
+        public partial class ModelosPrestablecidosDataTable : global::System.Data.TypedTableBase<ModelosPrestablecidosRow> {
             
             private global::System.Data.DataColumn columnModeloID;
             
@@ -285,8 +285,8 @@ namespace PF_48662379Z_49970058M_49478171L {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ModelosPreestablecidosDataTable() {
-                this.TableName = "ModelosPreestablecidos";
+            public ModelosPrestablecidosDataTable() {
+                this.TableName = "ModelosPrestablecidos";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -294,7 +294,7 @@ namespace PF_48662379Z_49970058M_49478171L {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal ModelosPreestablecidosDataTable(global::System.Data.DataTable table) {
+            internal ModelosPrestablecidosDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -311,7 +311,7 @@ namespace PF_48662379Z_49970058M_49478171L {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected ModelosPreestablecidosDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected ModelosPrestablecidosDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -343,53 +343,53 @@ namespace PF_48662379Z_49970058M_49478171L {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ModelosPreestablecidosRow this[int index] {
+            public ModelosPrestablecidosRow this[int index] {
                 get {
-                    return ((ModelosPreestablecidosRow)(this.Rows[index]));
+                    return ((ModelosPrestablecidosRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ModelosPreestablecidosRowChangeEventHandler ModelosPreestablecidosRowChanging;
+            public event ModelosPrestablecidosRowChangeEventHandler ModelosPrestablecidosRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ModelosPreestablecidosRowChangeEventHandler ModelosPreestablecidosRowChanged;
+            public event ModelosPrestablecidosRowChangeEventHandler ModelosPrestablecidosRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ModelosPreestablecidosRowChangeEventHandler ModelosPreestablecidosRowDeleting;
+            public event ModelosPrestablecidosRowChangeEventHandler ModelosPrestablecidosRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ModelosPreestablecidosRowChangeEventHandler ModelosPreestablecidosRowDeleted;
+            public event ModelosPrestablecidosRowChangeEventHandler ModelosPrestablecidosRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddModelosPreestablecidosRow(ModelosPreestablecidosRow row) {
+            public void AddModelosPrestablecidosRow(ModelosPrestablecidosRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ModelosPreestablecidosRow AddModelosPreestablecidosRow(string NombreModelo) {
-                ModelosPreestablecidosRow rowModelosPreestablecidosRow = ((ModelosPreestablecidosRow)(this.NewRow()));
+            public ModelosPrestablecidosRow AddModelosPrestablecidosRow(string NombreModelo) {
+                ModelosPrestablecidosRow rowModelosPrestablecidosRow = ((ModelosPrestablecidosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         NombreModelo};
-                rowModelosPreestablecidosRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowModelosPreestablecidosRow);
-                return rowModelosPreestablecidosRow;
+                rowModelosPrestablecidosRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowModelosPrestablecidosRow);
+                return rowModelosPrestablecidosRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ModelosPreestablecidosRow FindByModeloID(int ModeloID) {
-                return ((ModelosPreestablecidosRow)(this.Rows.Find(new object[] {
+            public ModelosPrestablecidosRow FindByModeloID(int ModeloID) {
+                return ((ModelosPrestablecidosRow)(this.Rows.Find(new object[] {
                             ModeloID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                ModelosPreestablecidosDataTable cln = ((ModelosPreestablecidosDataTable)(base.Clone()));
+                ModelosPrestablecidosDataTable cln = ((ModelosPrestablecidosDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -397,7 +397,7 @@ namespace PF_48662379Z_49970058M_49478171L {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new ModelosPreestablecidosDataTable();
+                return new ModelosPrestablecidosDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -427,28 +427,28 @@ namespace PF_48662379Z_49970058M_49478171L {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ModelosPreestablecidosRow NewModelosPreestablecidosRow() {
-                return ((ModelosPreestablecidosRow)(this.NewRow()));
+            public ModelosPrestablecidosRow NewModelosPrestablecidosRow() {
+                return ((ModelosPrestablecidosRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new ModelosPreestablecidosRow(builder);
+                return new ModelosPrestablecidosRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(ModelosPreestablecidosRow);
+                return typeof(ModelosPrestablecidosRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.ModelosPreestablecidosRowChanged != null)) {
-                    this.ModelosPreestablecidosRowChanged(this, new ModelosPreestablecidosRowChangeEvent(((ModelosPreestablecidosRow)(e.Row)), e.Action));
+                if ((this.ModelosPrestablecidosRowChanged != null)) {
+                    this.ModelosPrestablecidosRowChanged(this, new ModelosPrestablecidosRowChangeEvent(((ModelosPrestablecidosRow)(e.Row)), e.Action));
                 }
             }
             
@@ -456,8 +456,8 @@ namespace PF_48662379Z_49970058M_49478171L {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.ModelosPreestablecidosRowChanging != null)) {
-                    this.ModelosPreestablecidosRowChanging(this, new ModelosPreestablecidosRowChangeEvent(((ModelosPreestablecidosRow)(e.Row)), e.Action));
+                if ((this.ModelosPrestablecidosRowChanging != null)) {
+                    this.ModelosPrestablecidosRowChanging(this, new ModelosPrestablecidosRowChangeEvent(((ModelosPrestablecidosRow)(e.Row)), e.Action));
                 }
             }
             
@@ -465,8 +465,8 @@ namespace PF_48662379Z_49970058M_49478171L {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.ModelosPreestablecidosRowDeleted != null)) {
-                    this.ModelosPreestablecidosRowDeleted(this, new ModelosPreestablecidosRowChangeEvent(((ModelosPreestablecidosRow)(e.Row)), e.Action));
+                if ((this.ModelosPrestablecidosRowDeleted != null)) {
+                    this.ModelosPrestablecidosRowDeleted(this, new ModelosPrestablecidosRowChangeEvent(((ModelosPrestablecidosRow)(e.Row)), e.Action));
                 }
             }
             
@@ -474,14 +474,14 @@ namespace PF_48662379Z_49970058M_49478171L {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.ModelosPreestablecidosRowDeleting != null)) {
-                    this.ModelosPreestablecidosRowDeleting(this, new ModelosPreestablecidosRowChangeEvent(((ModelosPreestablecidosRow)(e.Row)), e.Action));
+                if ((this.ModelosPrestablecidosRowDeleting != null)) {
+                    this.ModelosPrestablecidosRowDeleting(this, new ModelosPrestablecidosRowChangeEvent(((ModelosPrestablecidosRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveModelosPreestablecidosRow(ModelosPreestablecidosRow row) {
+            public void RemoveModelosPrestablecidosRow(ModelosPrestablecidosRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -490,7 +490,7 @@ namespace PF_48662379Z_49970058M_49478171L {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DatasetModelos ds = new DatasetModelos();
+                masterDataSet4 ds = new masterDataSet4();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -508,7 +508,7 @@ namespace PF_48662379Z_49970058M_49478171L {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "ModelosPreestablecidosDataTable";
+                attribute2.FixedValue = "ModelosPrestablecidosDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -552,25 +552,25 @@ namespace PF_48662379Z_49970058M_49478171L {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class ModelosPreestablecidosRow : global::System.Data.DataRow {
+        public partial class ModelosPrestablecidosRow : global::System.Data.DataRow {
             
-            private ModelosPreestablecidosDataTable tableModelosPreestablecidos;
+            private ModelosPrestablecidosDataTable tableModelosPrestablecidos;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal ModelosPreestablecidosRow(global::System.Data.DataRowBuilder rb) : 
+            internal ModelosPrestablecidosRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableModelosPreestablecidos = ((ModelosPreestablecidosDataTable)(this.Table));
+                this.tableModelosPrestablecidos = ((ModelosPrestablecidosDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int ModeloID {
                 get {
-                    return ((int)(this[this.tableModelosPreestablecidos.ModeloIDColumn]));
+                    return ((int)(this[this.tableModelosPrestablecidos.ModeloIDColumn]));
                 }
                 set {
-                    this[this.tableModelosPreestablecidos.ModeloIDColumn] = value;
+                    this[this.tableModelosPrestablecidos.ModeloIDColumn] = value;
                 }
             }
             
@@ -579,28 +579,28 @@ namespace PF_48662379Z_49970058M_49478171L {
             public string NombreModelo {
                 get {
                     try {
-                        return ((string)(this[this.tableModelosPreestablecidos.NombreModeloColumn]));
+                        return ((string)(this[this.tableModelosPrestablecidos.NombreModeloColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'NombreModelo\' de la tabla \'ModelosPreestablecidos\' es DBN" +
-                                "ull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'NombreModelo\' de la tabla \'ModelosPrestablecidos\' es DBNu" +
+                                "ll.", e);
                     }
                 }
                 set {
-                    this[this.tableModelosPreestablecidos.NombreModeloColumn] = value;
+                    this[this.tableModelosPrestablecidos.NombreModeloColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsNombreModeloNull() {
-                return this.IsNull(this.tableModelosPreestablecidos.NombreModeloColumn);
+                return this.IsNull(this.tableModelosPrestablecidos.NombreModeloColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetNombreModeloNull() {
-                this[this.tableModelosPreestablecidos.NombreModeloColumn] = global::System.Convert.DBNull;
+                this[this.tableModelosPrestablecidos.NombreModeloColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -608,22 +608,22 @@ namespace PF_48662379Z_49970058M_49478171L {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class ModelosPreestablecidosRowChangeEvent : global::System.EventArgs {
+        public class ModelosPrestablecidosRowChangeEvent : global::System.EventArgs {
             
-            private ModelosPreestablecidosRow eventRow;
+            private ModelosPrestablecidosRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ModelosPreestablecidosRowChangeEvent(ModelosPreestablecidosRow row, global::System.Data.DataRowAction action) {
+            public ModelosPrestablecidosRowChangeEvent(ModelosPrestablecidosRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ModelosPreestablecidosRow Row {
+            public ModelosPrestablecidosRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -639,7 +639,7 @@ namespace PF_48662379Z_49970058M_49478171L {
         }
     }
 }
-namespace PF_48662379Z_49970058M_49478171L.DatasetModelosTableAdapters {
+namespace PF_48662379Z_49970058M_49478171L.masterDataSet4TableAdapters {
     
     
     /// <summary>
@@ -651,7 +651,7 @@ namespace PF_48662379Z_49970058M_49478171L.DatasetModelosTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class ModelosPreestablecidosTableAdapter : global::System.ComponentModel.Component {
+    public partial class ModelosPrestablecidosTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -665,7 +665,7 @@ namespace PF_48662379Z_49970058M_49478171L.DatasetModelosTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public ModelosPreestablecidosTableAdapter() {
+        public ModelosPrestablecidosTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -762,30 +762,30 @@ namespace PF_48662379Z_49970058M_49478171L.DatasetModelosTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "ModelosPreestablecidos";
+            tableMapping.DataSetTable = "ModelosPrestablecidos";
             tableMapping.ColumnMappings.Add("ModeloID", "ModeloID");
             tableMapping.ColumnMappings.Add("NombreModelo", "NombreModelo");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[ModelosPreestablecidos] WHERE (([ModeloID] = @Original_ModeloI" +
-                "D) AND ((@IsNull_NombreModelo = 1 AND [NombreModelo] IS NULL) OR ([NombreModelo]" +
-                " = @Original_NombreModelo)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[ModelosPrestablecidos] WHERE (([ModeloID] = @Original_ModeloID" +
+                ") AND ((@IsNull_NombreModelo = 1 AND [NombreModelo] IS NULL) OR ([NombreModelo] " +
+                "= @Original_NombreModelo)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ModeloID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ModeloID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_NombreModelo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NombreModelo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NombreModelo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NombreModelo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[ModelosPreestablecidos] ([NombreModelo]) VALUES (@NombreModelo" +
-                ");\r\nSELECT ModeloID, NombreModelo FROM ModelosPreestablecidos WHERE (ModeloID = " +
-                "SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[ModelosPrestablecidos] ([NombreModelo]) VALUES (@NombreModelo)" +
+                ";\r\nSELECT ModeloID, NombreModelo FROM ModelosPrestablecidos WHERE (ModeloID = SC" +
+                "OPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NombreModelo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NombreModelo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[ModelosPreestablecidos] SET [NombreModelo] = @NombreModelo WHERE (([ModeloID] = @Original_ModeloID) AND ((@IsNull_NombreModelo = 1 AND [NombreModelo] IS NULL) OR ([NombreModelo] = @Original_NombreModelo)));
-SELECT ModeloID, NombreModelo FROM ModelosPreestablecidos WHERE (ModeloID = @ModeloID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[ModelosPrestablecidos] SET [NombreModelo] = @NombreModelo WHERE (([ModeloID] = @Original_ModeloID) AND ((@IsNull_NombreModelo = 1 AND [NombreModelo] IS NULL) OR ([NombreModelo] = @Original_NombreModelo)));
+SELECT ModeloID, NombreModelo FROM ModelosPrestablecidos WHERE (ModeloID = @ModeloID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NombreModelo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NombreModelo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ModeloID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ModeloID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -807,7 +807,7 @@ SELECT ModeloID, NombreModelo FROM ModelosPreestablecidos WHERE (ModeloID = @Mod
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ModeloID, NombreModelo FROM dbo.ModelosPreestablecidos";
+            this._commandCollection[0].CommandText = "SELECT ModeloID, NombreModelo FROM dbo.ModelosPrestablecidos";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -815,7 +815,7 @@ SELECT ModeloID, NombreModelo FROM ModelosPreestablecidos WHERE (ModeloID = @Mod
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DatasetModelos.ModelosPreestablecidosDataTable dataTable) {
+        public virtual int Fill(masterDataSet4.ModelosPrestablecidosDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -828,9 +828,9 @@ SELECT ModeloID, NombreModelo FROM ModelosPreestablecidos WHERE (ModeloID = @Mod
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DatasetModelos.ModelosPreestablecidosDataTable GetData() {
+        public virtual masterDataSet4.ModelosPrestablecidosDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DatasetModelos.ModelosPreestablecidosDataTable dataTable = new DatasetModelos.ModelosPreestablecidosDataTable();
+            masterDataSet4.ModelosPrestablecidosDataTable dataTable = new masterDataSet4.ModelosPrestablecidosDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -838,15 +838,15 @@ SELECT ModeloID, NombreModelo FROM ModelosPreestablecidos WHERE (ModeloID = @Mod
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DatasetModelos.ModelosPreestablecidosDataTable dataTable) {
+        public virtual int Update(masterDataSet4.ModelosPrestablecidosDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DatasetModelos dataSet) {
-            return this.Adapter.Update(dataSet, "ModelosPreestablecidos");
+        public virtual int Update(masterDataSet4 dataSet) {
+            return this.Adapter.Update(dataSet, "ModelosPrestablecidos");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -979,7 +979,7 @@ SELECT ModeloID, NombreModelo FROM ModelosPreestablecidos WHERE (ModeloID = @Mod
         
         private UpdateOrderOption _updateOrder;
         
-        private ModelosPreestablecidosTableAdapter _modelosPreestablecidosTableAdapter;
+        private ModelosPrestablecidosTableAdapter _modelosPrestablecidosTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1001,12 +1001,12 @@ SELECT ModeloID, NombreModelo FROM ModelosPreestablecidos WHERE (ModeloID = @Mod
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public ModelosPreestablecidosTableAdapter ModelosPreestablecidosTableAdapter {
+        public ModelosPrestablecidosTableAdapter ModelosPrestablecidosTableAdapter {
             get {
-                return this._modelosPreestablecidosTableAdapter;
+                return this._modelosPrestablecidosTableAdapter;
             }
             set {
-                this._modelosPreestablecidosTableAdapter = value;
+                this._modelosPrestablecidosTableAdapter = value;
             }
         }
         
@@ -1029,9 +1029,9 @@ SELECT ModeloID, NombreModelo FROM ModelosPreestablecidos WHERE (ModeloID = @Mod
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._modelosPreestablecidosTableAdapter != null) 
-                            && (this._modelosPreestablecidosTableAdapter.Connection != null))) {
-                    return this._modelosPreestablecidosTableAdapter.Connection;
+                if (((this._modelosPrestablecidosTableAdapter != null) 
+                            && (this._modelosPrestablecidosTableAdapter.Connection != null))) {
+                    return this._modelosPrestablecidosTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1046,7 +1046,7 @@ SELECT ModeloID, NombreModelo FROM ModelosPreestablecidos WHERE (ModeloID = @Mod
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._modelosPreestablecidosTableAdapter != null)) {
+                if ((this._modelosPrestablecidosTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1058,14 +1058,14 @@ SELECT ModeloID, NombreModelo FROM ModelosPreestablecidos WHERE (ModeloID = @Mod
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(DatasetModelos dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(masterDataSet4 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._modelosPreestablecidosTableAdapter != null)) {
+            if ((this._modelosPrestablecidosTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.ModelosPrestablecidos.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._modelosPreestablecidosTableAdapter.Update(updatedRows));
+                    result = (result + this._modelosPrestablecidosTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1077,13 +1077,13 @@ SELECT ModeloID, NombreModelo FROM ModelosPreestablecidos WHERE (ModeloID = @Mod
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(DatasetModelos dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(masterDataSet4 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._modelosPreestablecidosTableAdapter != null)) {
+            if ((this._modelosPrestablecidosTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.ModelosPrestablecidos.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._modelosPreestablecidosTableAdapter.Update(addedRows));
+                    result = (result + this._modelosPrestablecidosTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1095,13 +1095,13 @@ SELECT ModeloID, NombreModelo FROM ModelosPreestablecidos WHERE (ModeloID = @Mod
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(DatasetModelos dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(masterDataSet4 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._modelosPreestablecidosTableAdapter != null)) {
+            if ((this._modelosPrestablecidosTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.ModelosPrestablecidos.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._modelosPreestablecidosTableAdapter.Update(deletedRows));
+                    result = (result + this._modelosPrestablecidosTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1137,15 +1137,15 @@ SELECT ModeloID, NombreModelo FROM ModelosPreestablecidos WHERE (ModeloID = @Mod
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(DatasetModelos dataSet) {
+        public virtual int UpdateAll(masterDataSet4 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._modelosPreestablecidosTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._modelosPreestablecidosTableAdapter.Connection) == false))) {
+            if (((this._modelosPrestablecidosTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._modelosPrestablecidosTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi" +
                         "sma cadena de conexión.");
             }
@@ -1181,13 +1181,13 @@ SELECT ModeloID, NombreModelo FROM ModelosPreestablecidos WHERE (ModeloID = @Mod
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._modelosPreestablecidosTableAdapter != null)) {
-                    revertConnections.Add(this._modelosPreestablecidosTableAdapter, this._modelosPreestablecidosTableAdapter.Connection);
-                    this._modelosPreestablecidosTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._modelosPreestablecidosTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._modelosPreestablecidosTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._modelosPreestablecidosTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._modelosPreestablecidosTableAdapter.Adapter);
+                if ((this._modelosPrestablecidosTableAdapter != null)) {
+                    revertConnections.Add(this._modelosPrestablecidosTableAdapter, this._modelosPrestablecidosTableAdapter.Connection);
+                    this._modelosPrestablecidosTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._modelosPrestablecidosTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._modelosPrestablecidosTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._modelosPrestablecidosTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._modelosPrestablecidosTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1248,9 +1248,9 @@ SELECT ModeloID, NombreModelo FROM ModelosPreestablecidos WHERE (ModeloID = @Mod
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._modelosPreestablecidosTableAdapter != null)) {
-                    this._modelosPreestablecidosTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._modelosPreestablecidosTableAdapter]));
-                    this._modelosPreestablecidosTableAdapter.Transaction = null;
+                if ((this._modelosPrestablecidosTableAdapter != null)) {
+                    this._modelosPrestablecidosTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._modelosPrestablecidosTableAdapter]));
+                    this._modelosPrestablecidosTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
