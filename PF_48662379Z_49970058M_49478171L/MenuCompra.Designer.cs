@@ -66,11 +66,10 @@
             this.modelosimagen = new System.Windows.Forms.PictureBox();
             this.modeloscomprar = new System.Windows.Forms.Button();
             this.modeloscombobox = new System.Windows.Forms.ComboBox();
-            this.modelosPreestablecidosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.datasetModelos = new PF_48662379Z_49970058M_49478171L.DatasetModelos();
-            this.modelosPreestablecidosTableAdapter = new PF_48662379Z_49970058M_49478171L.DatasetModelosTableAdapters.ModelosPreestablecidosTableAdapter();
-            this.masterDataSet4 = new PF_48662379Z_49970058M_49478171L.masterDataSet4();
             this.modelosPrestablecidosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.masterDataSet4 = new PF_48662379Z_49970058M_49478171L.masterDataSet4();
+            this.modelosPreestablecidosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.modelosPreestablecidosTableAdapter = new PF_48662379Z_49970058M_49478171L.DatasetModelosTableAdapters.ModelosPreestablecidosTableAdapter();
             this.modelosPrestablecidosTableAdapter = new PF_48662379Z_49970058M_49478171L.masterDataSet4TableAdapters.ModelosPrestablecidosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.bicicletasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
@@ -83,11 +82,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.imagenesBicis)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.modelosimagen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.modelosPreestablecidosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datasetModelos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datasetModelos.ModelosPrestablecidos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.modelosPrestablecidosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modelosPreestablecidosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // cbBicicleta
@@ -486,36 +483,23 @@
             this.modeloscombobox.ValueMember = "ModeloID";
             this.modeloscombobox.SelectedIndexChanged += new System.EventHandler(this.modeloscombobox_SelectedIndexChanged);
             // 
-            // modelosPreestablecidosBindingSource
+            // modelosPrestablecidosBindingSource
             // 
-            this.modelosPreestablecidosBindingSource.DataMember = "ModelosPreestablecidos";
-            this.modelosPreestablecidosBindingSource.DataSource = this.datasetModelos;
-            // 
-            // datasetModelos
-            // 
-            this.datasetModelos.DataSetName = "DatasetModelos";
-            // 
-            // 
-            // 
-            this.datasetModelos.ModelosPrestablecidos.Constraints.AddRange(new System.Data.Constraint[] {
-            new System.Data.UniqueConstraint("Constraint1", new string[] {
-                        "ModeloID"}, true)});
-            this.datasetModelos.ModelosPrestablecidos.TableName = "ModelosPreestablecidos";
-            this.datasetModelos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // modelosPreestablecidosTableAdapter
-            // 
-            this.modelosPreestablecidosTableAdapter.ClearBeforeFill = true;
+            this.modelosPrestablecidosBindingSource.DataMember = "ModelosPrestablecidos";
+            this.modelosPrestablecidosBindingSource.DataSource = this.masterDataSet4;
             // 
             // masterDataSet4
             // 
             this.masterDataSet4.DataSetName = "masterDataSet4";
             this.masterDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // modelosPrestablecidosBindingSource
+            // modelosPreestablecidosBindingSource
             // 
-            this.modelosPrestablecidosBindingSource.DataMember = "ModelosPrestablecidos";
-            this.modelosPrestablecidosBindingSource.DataSource = this.masterDataSet4;
+            this.modelosPreestablecidosBindingSource.DataMember = "ModelosPreestablecidos";
+            // 
+            // modelosPreestablecidosTableAdapter
+            // 
+            this.modelosPreestablecidosTableAdapter.ClearBeforeFill = true;
             // 
             // modelosPrestablecidosTableAdapter
             // 
@@ -544,11 +528,9 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.modelosimagen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.modelosPreestablecidosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datasetModelos.ModelosPrestablecidos)).EndInit();
-           // ((System.ComponentModel.ISupportInitialize)(this.datasetModelos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.modelosPrestablecidosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modelosPreestablecidosBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -592,7 +574,6 @@
         private System.Windows.Forms.PictureBox modelosimagen;
         private System.Windows.Forms.Button modeloscomprar;
         private System.Windows.Forms.ComboBox modeloscombobox;
-        private DatasetModelos datasetModelos;
         private System.Windows.Forms.BindingSource modelosPreestablecidosBindingSource;
         private DatasetModelosTableAdapters.ModelosPreestablecidosTableAdapter modelosPreestablecidosTableAdapter;
         private masterDataSet4 masterDataSet4;

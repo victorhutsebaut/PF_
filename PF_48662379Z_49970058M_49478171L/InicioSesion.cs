@@ -26,7 +26,7 @@ namespace PF_48662379Z_49970058M_49478171L
 
         private void btn_cerrar_inicio_sesion_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
         }
 
         private void checkBox_mostrar_contraseña_CheckedChanged(object sender, EventArgs e)
@@ -117,7 +117,6 @@ namespace PF_48662379Z_49970058M_49478171L
                     this.Hide();
                     MenuCompra menuCompra = new MenuCompra();
                     menuCompra.Show();
-
                 }
                 else
                 {

@@ -25,8 +25,15 @@ namespace PF_48662379Z_49970058M_49478171L
             modelosimagen.Image = Resources.ET;
             cbBaterias.SelectedIndexChanged += new EventHandler(ComboBoxes_SelectedIndexChanged);
             cbMotores.SelectedIndexChanged += new EventHandler(ComboBoxes_SelectedIndexChanged);
+            this.FormClosed += new FormClosedEventHandler(MenuCompra_FormClosed);
         }
 
+        private void MenuCompra_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Hide();
+            InicioSesion inicioSesion = new InicioSesion();
+            inicioSesion.ShowDialog();
+        }
         private decimal ObtenerPrecioPorId(string tableName, int itemId)
         {
             decimal precio = 0;
@@ -231,9 +238,52 @@ namespace PF_48662379Z_49970058M_49478171L
 
         }
 
+        private string VerificarColor()
+        {
+            string color = "";
+
+            if (rbazul.Checked)
+            {
+                color = "Azul";
+            }
+            else if (rbnegro.Checked)
+            {
+                color = "Negro";
+            }
+            else if (rbrojo.Checked)
+            {
+                color = "Rojo";
+            }
+            else if (rbrosa.Checked)
+            {
+                color = "Rosa";
+            }
+            else if (rbverde.Checked)
+            {
+                color = "Verde";
+            }
+            else if (rbnaranja.Checked)
+            {
+                color = "Naranja";
+            }
+            else if (rbneon.Checked)
+            {
+                rbneon.Checked = false;
+            }
+            return color;
+
+
+
+        }
         private void btn_carrito_Click(object sender, EventArgs e)
         {
 
+            string Color = VerificarColor();
+            if(Color == "")
+            {
+                MessageBox.Show("Inserta un color");
+                return;
+            }
             string connectionString = "server=(local)\\SQLEXPRESS;database=master; Integrated Security = SSPI";
             SqlConnection conn = new SqlConnection(connectionString);
 
@@ -241,7 +291,7 @@ namespace PF_48662379Z_49970058M_49478171L
             string Bateria = cbBaterias.Text;
             string Motor = cbMotores.Text;
 
-            string query = "INSERT INTO  Compras(Nombre_Bicicleta, Nombre_Bateria, Nombre_Motor, Precio_Total) VALUES (@bici, @bateria, @motor, @preciototal)";
+            string query = "INSERT INTO  Compras(Nombre_Bicicleta, Nombre_Bateria, Nombre_Motor, Nombre_Color, Precio_Total) VALUES (@bici, @bateria, @motor, @color, @preciototal)";
 
             try
             {
@@ -252,6 +302,7 @@ namespace PF_48662379Z_49970058M_49478171L
                 cmd.Parameters.AddWithValue("@bici", Bici);
                 cmd.Parameters.AddWithValue("@bateria", Bateria);
                 cmd.Parameters.AddWithValue("@motor", Motor);
+                cmd.Parameters.AddWithValue("@color", Color);
                 cmd.Parameters.AddWithValue("@preciototal", precioTotal);
 
                 // Ejecutar la consulta
@@ -278,14 +329,16 @@ namespace PF_48662379Z_49970058M_49478171L
                 objWorksheet.Cells[1, 1] = "Nombre Bicicleta";
                 objWorksheet.Cells[1, 2] = "Nombre Bateria";
                 objWorksheet.Cells[1, 3] = "Nombre Motor";
-                objWorksheet.Cells[1, 4] = "Precio Total";
+                objWorksheet.Cells[1, 4] = "Nombre Color";
+                objWorksheet.Cells[1, 5] = "Precio Total";
 
                 // Inicializar una variable para el número de fila
 
                 objWorksheet.Cells[2, 1] = Bici;
                 objWorksheet.Cells[2, 2] = Bateria;
                 objWorksheet.Cells[2, 3] = Motor;
-                objWorksheet.Cells[2, 4] = precioTotal;
+                objWorksheet.Cells[2, 4] = Color;
+                objWorksheet.Cells[2, 5] = precioTotal;
 
             }
 

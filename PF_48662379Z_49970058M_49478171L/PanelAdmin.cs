@@ -22,7 +22,16 @@ namespace PF_48662379Z_49970058M_49478171L
         public PanelAdmin()
         {
             InitializeComponent();
+            this.FormClosed += new FormClosedEventHandler(PanelAdmin_FormClosed);
         }
+
+        private void PanelAdmin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Hide();
+            InicioSesion inicioSesion = new InicioSesion();
+            inicioSesion.ShowDialog();
+        }
+    
         private void LoadUsersToListView()
         {
             // Define tu cadena de conexión aquí
